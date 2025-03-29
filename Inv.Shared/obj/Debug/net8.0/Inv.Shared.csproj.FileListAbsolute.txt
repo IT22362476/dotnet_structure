@@ -11,3 +11,16 @@ D:\GitHub\Inventory\src\Services\Inv\Inv.Shared\obj\Debug\net8.0\Inv.Shared.dll
 D:\GitHub\Inventory\src\Services\Inv\Inv.Shared\obj\Debug\net8.0\refint\Inv.Shared.dll
 D:\GitHub\Inventory\src\Services\Inv\Inv.Shared\obj\Debug\net8.0\Inv.Shared.pdb
 D:\GitHub\Inventory\src\Services\Inv\Inv.Shared\obj\Debug\net8.0\ref\Inv.Shared.dll
+D:\GitHub\NewInventory\Inv.Shared\bin\Debug\net8.0\Inv.Shared.deps.json
+D:\GitHub\NewInventory\Inv.Shared\bin\Debug\net8.0\Inv.Shared.dll
+D:\GitHub\NewInventory\Inv.Shared\bin\Debug\net8.0\Inv.Shared.pdb
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.csproj.AssemblyReference.cache
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.AssemblyInfoInputs.cache
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.AssemblyInfo.cs
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.csproj.CoreCompileInputs.cache
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.sourcelink.json
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.dll
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\refint\Inv.Shared.dll
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.pdb
+D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\ref\Inv.Shared.dll

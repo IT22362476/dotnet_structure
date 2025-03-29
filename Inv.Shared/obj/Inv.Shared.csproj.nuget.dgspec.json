@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj": {}
+    "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj": {
+    "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj",
+        "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
         "projectName": "Inv.Shared",
-        "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj",
+        "projectPath": "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
         "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\obj\\",
+        "outputPath": "D:\\GitHub\\NewInventory\\Inv.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",

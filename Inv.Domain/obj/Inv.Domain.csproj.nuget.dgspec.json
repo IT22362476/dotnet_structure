@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj": {}
+    "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj": {
+    "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj",
+        "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj",
         "projectName": "Inv.Domain",
-        "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj",
+        "projectPath": "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj",
         "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\obj\\",
+        "outputPath": "D:\\GitHub\\NewInventory\\Inv.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",

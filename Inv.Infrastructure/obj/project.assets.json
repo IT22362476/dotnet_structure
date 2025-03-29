@@ -3542,11 +3542,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
+      "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
       "projectName": "Inv.Infrastructure",
-      "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
+      "projectPath": "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\obj\\",
+      "outputPath": "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3564,8 +3564,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\Inv.Application.csproj": {
-              "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\Inv.Application.csproj"
+            "D:\\GitHub\\NewInventory\\Inv.Application\\Inv.Application.csproj": {
+              "projectPath": "D:\\GitHub\\NewInventory\\Inv.Application\\Inv.Application.csproj"
             }
           }
         }

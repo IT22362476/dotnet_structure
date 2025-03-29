@@ -180,3 +180,7 @@ D:\GitHub\Inventory\src\Services\Inv\Inv.WebAPI\bin\Debug\net8.0\Inv.Domain.pdb
 D:\GitHub\Inventory\src\Services\Inv\Inv.WebAPI\bin\Debug\net8.0\appsettings.Production.json
 D:\GitHub\Inventory\src\Services\Inv\Inv.WebAPI\bin\Debug\net8.0\Inv.WebAPI.xml
 D:\GitHub\Inventory\src\Services\Inv\Inv.WebAPI\obj\Debug\net8.0\Inv.WebAPI.xml
+D:\GitHub\NewInventory\Inv.WebAPI\obj\Debug\net8.0\Inv.WebAPI.dll
+D:\GitHub\NewInventory\Inv.WebAPI\obj\Debug\net8.0\refint\Inv.WebAPI.dll
+D:\GitHub\NewInventory\Inv.WebAPI\obj\Debug\net8.0\Inv.WebAPI.xml
+D:\GitHub\NewInventory\Inv.WebAPI\obj\Debug\net8.0\Inv.WebAPI.pdb

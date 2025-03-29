@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\Inv.Infrastructure.csproj": {}
+    "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\Inv.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\Inv.Application.csproj": {
+    "D:\\GitHub\\NewInventory\\Inv.Application\\Inv.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\Inv.Application.csproj",
+        "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Application\\Inv.Application.csproj",
         "projectName": "Inv.Application",
-        "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\Inv.Application.csproj",
+        "projectPath": "D:\\GitHub\\NewInventory\\Inv.Application\\Inv.Application.csproj",
         "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\obj\\",
+        "outputPath": "D:\\GitHub\\NewInventory\\Inv.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj": {
-                "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj"
+              "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj": {
+                "projectPath": "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj"
               },
-              "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj": {
-                "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj"
+              "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj": {
+                "projectPath": "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj"
               }
             }
           }
@@ -106,14 +106,14 @@
         }
       }
     },
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj": {
+    "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj",
+        "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj",
         "projectName": "Inv.Domain",
-        "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj",
+        "projectPath": "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj",
         "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\obj\\",
+        "outputPath": "D:\\GitHub\\NewInventory\\Inv.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -185,14 +185,14 @@
         }
       }
     },
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\Inv.Infrastructure.csproj": {
+    "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\Inv.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
+        "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
         "projectName": "Inv.Infrastructure",
-        "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
+        "projectPath": "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\Inv.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Infrastructure\\obj\\",
+        "outputPath": "D:\\GitHub\\NewInventory\\Inv.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -210,8 +210,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\Inv.Application.csproj": {
-                "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Application\\Inv.Application.csproj"
+              "D:\\GitHub\\NewInventory\\Inv.Application\\Inv.Application.csproj": {
+                "projectPath": "D:\\GitHub\\NewInventory\\Inv.Application\\Inv.Application.csproj"
               }
             }
           }
@@ -250,14 +250,14 @@
         }
       }
     },
-    "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj": {
+    "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj",
+        "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
         "projectName": "Inv.Shared",
-        "projectPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\Inv.Shared.csproj",
+        "projectPath": "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
         "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Shared\\obj\\",
+        "outputPath": "D:\\GitHub\\NewInventory\\Inv.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",

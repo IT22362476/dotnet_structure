@@ -22,3 +22,6 @@ D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persis
 D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\ref\Inv.Persistence.dll
 D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\JwtTokenAuthentication.dll
 D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\JwtTokenAuthentication.pdb
+D:\GitHub\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.dll
+D:\GitHub\NewInventory\Inv.Persistence\obj\Debug\net8.0\refint\Inv.Persistence.dll
+D:\GitHub\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dulnoWUdENo=",
+  "dgSpecHash": "h8fwsP21cAM=",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\Inventory\\src\\Services\\Inv\\Inv.Domain\\Inv.Domain.csproj",
+  "projectFilePath": "D:\\GitHub\\NewInventory\\Inv.Domain\\Inv.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\audit.entityframework.core\\27.0.3\\audit.entityframework.core.27.0.3.nupkg.sha512",
     "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\audit.net\\27.0.3\\audit.net.27.0.3.nupkg.sha512",
