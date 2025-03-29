@@ -1,0 +1,13 @@
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.csproj.AssemblyReference.cache
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.AssemblyInfoInputs.cache
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.AssemblyInfo.cs
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.csproj.CoreCompileInputs.cache
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.sourcelink.json
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\bin\Debug\net8.0\Inv.Domain.deps.json
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\bin\Debug\net8.0\Inv.Domain.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\bin\Debug\net8.0\Inv.Domain.pdb
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\refint\Inv.Domain.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\Inv.Domain.pdb
+D:\GitHub\Inventory\src\Services\Inv\Inv.Domain\obj\Debug\net8.0\ref\Inv.Domain.dll
