@@ -25,7 +25,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\CommonLibrary\JwtTokenAuthentication.csproj" />
 		<ProjectReference Include="..\Inv.Application\Inv.Application.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="JwtTokenAuthentication">
+	    <HintPath>..\_dll\JwtTokenAuthentication.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 </Project>
