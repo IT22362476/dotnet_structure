@@ -368,19 +368,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
       "projectName": "Inv.Shared",
-      "projectPath": "D:\\GitHub\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
-      "packagesPath": "C:\\Users\\Kokila Sanjeewa\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\NewInventory\\Inv.Shared\\obj\\",
+      "projectPath": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Shared\\Inv.Shared.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Shared\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Kokila Sanjeewa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -388,7 +393,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -406,7 +410,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -437,7 +442,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
