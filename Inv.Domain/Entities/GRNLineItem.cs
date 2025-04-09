@@ -1,13 +1,9 @@
 ﻿using Inv.Domain.Common;
 using Inv.Domain.Configarations;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Inv.Domain.Entities
 {
@@ -27,4 +23,6 @@ namespace Inv.Domain.Entities
         [ForeignKey(nameof(POItemSerialID))]
         public virtual PurchaseOrderItem? POItem { get; set; }
     }
+
+   
 }

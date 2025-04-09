@@ -11,7 +11,7 @@ namespace Inv.Persistence.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _dbContext;
-
+        private IDbContextTransaction _currentTransaction;   
         private Hashtable _repositories;
         private bool disposed;
 
@@ -38,13 +38,16 @@ namespace Inv.Persistence.Repositories
 
             return (IGenericRepository<T>)_repositories[type];
         }
-
         public Task Rollback()
         {
             _dbContext.ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
             return Task.CompletedTask;
         }
 
+        public async Task<int> SaveNoCommitRoll(CancellationToken cancellationToken)
+        {
+            return await _dbContext.SaveChangesAsync(cancellationToken);
+        }
         public async Task<int> Save(CancellationToken cancellationToken)
         {
             var executionStrategy = _dbContext.Database.CreateExecutionStrategy();
@@ -72,6 +75,7 @@ namespace Inv.Persistence.Repositories
                     throw;
                 }
             });
+
         }
 
         public Task<int> SaveAndRemoveCache(CancellationToken cancellationToken, params string[] cacheKeys)
@@ -98,6 +102,35 @@ namespace Inv.Persistence.Repositories
             // Dispose unmanaged resources
             disposed = true;
         }
+        // new testing code
+
+        public async Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default)
+        {
+            if (_currentTransaction == null)
+            {
+                _currentTransaction = await _dbContext.Database.BeginTransactionAsync(cancellationToken);
+            }
+            return _currentTransaction;
+        }
+        public async Task CommitAsync()
+        {
+            if (_currentTransaction != null)
+            {
+                await _currentTransaction.CommitAsync();
+                _currentTransaction.Dispose();
+                _currentTransaction = null; // Reset after commit
+            }
+        }
+        public async Task RollbackAsync()
+        {
+            if (_currentTransaction != null)
+            {
+                await _currentTransaction.RollbackAsync();
+                _currentTransaction.Dispose();
+                _currentTransaction = null; // Reset after rollback
+            }
+        }
+
     }
 
 }

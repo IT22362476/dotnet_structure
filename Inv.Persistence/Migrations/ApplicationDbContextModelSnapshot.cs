@@ -430,6 +430,159 @@ namespace Inv.Persistence.Migrations
                     b.ToTable("GRN", "Inv");
                 });
 
+            modelBuilder.Entity("Inv.Domain.Entities.GRNDetail", b =>
+                {
+                    b.Property<int>("GRNDetailSerialID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GRNDetailSerialID"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("AssetCount")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("BatchBalQty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("BatchNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Condition")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("FOCQty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("GRNHeaderSerialID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ItemSerialID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LineNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ModifiedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Qty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Remarks")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("SystemPOSerialID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UOMSerialID")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("WarrentyPeriod")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("GRNDetailSerialID");
+
+                    b.HasIndex("GRNHeaderSerialID");
+
+                    b.HasIndex("IsDeleted")
+                        .HasFilter("[IsDeleted] = 1");
+
+                    b.HasIndex("UOMSerialID");
+
+                    b.ToTable("GRNDetail", "Inv");
+                });
+
+            modelBuilder.Entity("Inv.Domain.Entities.GRNHeader", b =>
+                {
+                    b.Property<int>("GRNHeaderSerialID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GRNHeaderSerialID"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("ApprovedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ApprovedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CompSerialID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GRNID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("ModifiedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PreparedBy")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Printed")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("StoreSerialID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SupplierInvoiceNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SupplierSerialID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WHSerialID")
+                        .HasColumnType("int");
+
+                    b.HasKey("GRNHeaderSerialID");
+
+                    b.HasIndex("IsDeleted")
+                        .HasFilter("[IsDeleted] = 1");
+
+                    b.HasIndex("StoreSerialID");
+
+                    b.HasIndex("WHSerialID");
+
+                    b.ToTable("GRNHeader", "Inv");
+                });
+
             modelBuilder.Entity("Inv.Domain.Entities.GRNLineItem", b =>
                 {
                     b.Property<int>("GRNLineItemSerialID")
@@ -459,17 +612,11 @@ namespace Inv.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("ItemSerialID")
-                        .HasColumnType("int");
-
                     b.Property<int?>("ModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("POItemPOSerialID")
-                        .HasColumnType("int");
 
                     b.Property<int>("POItemSerialID")
                         .HasColumnType("int");
@@ -487,9 +634,7 @@ namespace Inv.Persistence.Migrations
                     b.HasIndex("IsDeleted")
                         .HasFilter("[IsDeleted] = 1");
 
-                    b.HasIndex("ItemSerialID");
-
-                    b.HasIndex("POItemPOSerialID");
+                    b.HasIndex("POItemSerialID");
 
                     b.ToTable("GRNLineItem", "Inv");
                 });
@@ -770,9 +915,6 @@ namespace Inv.Persistence.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Code")
-                        .HasColumnType("int");
-
                     b.Property<int?>("CreatedBy")
                         .HasColumnType("int");
 
@@ -781,6 +923,9 @@ namespace Inv.Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<int>("ItemTypeCode")
+                        .HasColumnType("int");
 
                     b.Property<int>("ItemTypeID")
                         .ValueGeneratedOnAdd()
@@ -968,10 +1113,7 @@ namespace Inv.Persistence.Migrations
             modelBuilder.Entity("Inv.Domain.Entities.PurchaseOrderItem", b =>
                 {
                     b.Property<int>("POSerialID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("POSerialID"));
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -1003,9 +1145,6 @@ namespace Inv.Persistence.Migrations
                     b.Property<int>("POItemSerialID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PurchaseOrderPOSerialID")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Quantity")
                         .HasColumnType("decimal(18,2)");
 
@@ -1022,8 +1161,6 @@ namespace Inv.Persistence.Migrations
 
                     b.HasIndex("POItemID")
                         .IsUnique();
-
-                    b.HasIndex("PurchaseOrderPOSerialID");
 
                     b.ToTable("PurchaseOrderItem", "Inv");
                 });
@@ -1704,6 +1841,44 @@ namespace Inv.Persistence.Migrations
                     b.Navigation("Supplier");
                 });
 
+            modelBuilder.Entity("Inv.Domain.Entities.GRNDetail", b =>
+                {
+                    b.HasOne("Inv.Domain.Entities.GRNHeader", "GRNHeader")
+                        .WithMany("GRNDetails")
+                        .HasForeignKey("GRNHeaderSerialID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Inv.Domain.Entities.UOM", "UOM")
+                        .WithMany()
+                        .HasForeignKey("UOMSerialID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GRNHeader");
+
+                    b.Navigation("UOM");
+                });
+
+            modelBuilder.Entity("Inv.Domain.Entities.GRNHeader", b =>
+                {
+                    b.HasOne("Inv.Domain.Entities.Store", "Store")
+                        .WithMany()
+                        .HasForeignKey("StoreSerialID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Inv.Domain.Entities.Warehouse", "Warehouse")
+                        .WithMany()
+                        .HasForeignKey("WHSerialID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Store");
+
+                    b.Navigation("Warehouse");
+                });
+
             modelBuilder.Entity("Inv.Domain.Entities.GRNLineItem", b =>
                 {
                     b.HasOne("Inv.Domain.Entities.GRN", "GRN")
@@ -1712,19 +1887,13 @@ namespace Inv.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Inv.Domain.Entities.Item", "Item")
-                        .WithMany()
-                        .HasForeignKey("ItemSerialID");
-
                     b.HasOne("Inv.Domain.Entities.PurchaseOrderItem", "POItem")
                         .WithMany()
-                        .HasForeignKey("POItemPOSerialID")
+                        .HasForeignKey("POItemSerialID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("GRN");
-
-                    b.Navigation("Item");
 
                     b.Navigation("POItem");
                 });
@@ -1836,7 +2005,9 @@ namespace Inv.Persistence.Migrations
                 {
                     b.HasOne("Inv.Domain.Entities.PurchaseOrder", "PurchaseOrder")
                         .WithMany("PurchaseOrderItem")
-                        .HasForeignKey("PurchaseOrderPOSerialID");
+                        .HasForeignKey("POSerialID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("PurchaseOrder");
                 });
@@ -1938,6 +2109,11 @@ namespace Inv.Persistence.Migrations
                     b.Navigation("GRNItem");
 
                     b.Navigation("Invoice");
+                });
+
+            modelBuilder.Entity("Inv.Domain.Entities.GRNHeader", b =>
+                {
+                    b.Navigation("GRNDetails");
                 });
 
             modelBuilder.Entity("Inv.Domain.Entities.Invoice", b =>

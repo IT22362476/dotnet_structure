@@ -2,9 +2,11 @@
 using AutoMapper;
 using Inv.Application.DTOs.GRN;
 using Inv.Application.DTOs.Item;
+using Inv.Application.Features.GRN.Commands;
 using Inv.Domain.Entities;
 using Inv.Infrastructure.Services;
 using Inv.Persistence.Contexts;
+using Inv.Shared;
 using JwtTokenAuthentication.Constants;
 using JwtTokenAuthentication.Permission;
 using MediatR;
@@ -97,16 +99,30 @@ namespace Inv.WebAPI.Controllers
             var dto = _mapper.Map<List<GetGRNDto>>(entities);
             return Ok(dto);
         }
+
         /// <summary>
         /// Creates a new grn.
         /// </summary>
         /// <param name="createDto">The DTO representing the grn to be created.</param>
         /// <param name="uniquePropertyNames">Optional: Array of property names to check for uniqueness.</param>
         [HttpPost(Name = "CreateGRN")]
+        [ApiExplorerSettings(IgnoreApi = true)] // Optional: hides this from Swagger
         [AuthorizeMultiplePermissions(Permissions.Btn_SetSaveGRN)]
         public override async Task<ActionResult<GetGRNDto>> Create([FromBody] CreateGRNDto createDto, [FromQuery] string[]? uniquePropertyNames = null)
         {
             return await base.Create(createDto, new[] { "GRNName" });
+        }
+
+        /// <summary>
+        /// Creates a new grn.
+        /// </summary>
+        /// <param name="request">The DTO representing the grn to be created.</param>
+        /// <param name="cancellationToken"> Cancellation token for async operations.</param>
+        [HttpPost("create")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_SetSaveGRN)]
+        public async Task<ActionResult<Result<int>>> CreateGRN([FromBody] CreateGRNCommand request, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(request, cancellationToken);
         }
 
         /// <summary>

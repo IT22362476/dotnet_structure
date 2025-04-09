@@ -1419,74 +1419,6 @@
           }
         }
       },
-      "post": {
-        "tags": [
-          "GRN"
-        ],
-        "summary": "Creates a new grn.",
-        "operationId": "CreateGRN",
-        "parameters": [
-          {
-            "name": "uniquePropertyNames",
-            "in": "query",
-            "description": "Optional: Array of property names to check for uniqueness.",
-            "style": "form",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "The DTO representing the grn to be created.",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateGRNDto"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateGRNDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateGRNDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateGRNDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetGRNDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetGRNDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetGRNDto"
-                }
-              }
-            }
-          }
-        }
-      },
       "put": {
         "tags": [
           "GRN"
@@ -1667,6 +1599,61 @@
                   "items": {
                     "$ref": "#/components/schemas/GetGRNDto"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/inv/GRN/create": {
+      "post": {
+        "tags": [
+          "GRN"
+        ],
+        "summary": "Creates a new grn.",
+        "requestBody": {
+          "description": "The DTO representing the grn to be created.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGRNCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGRNCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGRNCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGRNCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32Result"
                 }
               }
             }
@@ -5482,6 +5469,15 @@
         "type": "integer",
         "format": "int32"
       },
+      "Condition": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "ConstructorInfo": {
         "type": "object",
         "properties": {
@@ -5754,8 +5750,104 @@
         },
         "additionalProperties": false
       },
-      "CreateGRNDto": {
+      "CreateGRNCommand": {
+        "required": [
+          "compSerialID",
+          "grnDetails",
+          "storeSerialID",
+          "supplierInvoiceNumber",
+          "supplierSerialID",
+          "whSerialID"
+        ],
         "type": "object",
+        "properties": {
+          "compSerialID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "supplierSerialID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "supplierInvoiceNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "whSerialID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "storeSerialID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "grnDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateGRNDetailDto"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateGRNDetailDto": {
+        "type": "object",
+        "properties": {
+          "lineNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemSerialID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "systemPOSerialID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "batchNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "warrentyPeriod": {
+            "type": "number",
+            "format": "double"
+          },
+          "uomSerialID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/Condition"
+          },
+          "qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "focQty": {
+            "type": "number",
+            "format": "double"
+          },
+          "batchBalQty": {
+            "type": "number",
+            "format": "double"
+          },
+          "assetCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       },
       "CreateInvoiceDto": {

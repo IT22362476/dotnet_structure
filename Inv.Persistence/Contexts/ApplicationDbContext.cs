@@ -42,8 +42,12 @@ namespace Inv.Persistence.Contexts
         public DbSet<CompatibleItem> CompatibleItem => Set<CompatibleItem>();
         public DbSet<CusPriceCategory> CusPriceCategory => Set<CusPriceCategory>();
         public DbSet<Supplier> Supplier => Set<Supplier>();
+        //Help for EAM remove later
         public DbSet<GRN> GRN => Set<GRN>();
         public DbSet<GRNLineItem> GRNLineItem => Set<GRNLineItem>();
+        // In future work with this
+        public DbSet<GRNHeader> GRNHeader => Set<GRNHeader>();
+        public DbSet<GRNDetail> GRNDetail => Set<GRNDetail>();
         public DbSet<Invoice> Invoice => Set<Invoice>();
         public DbSet<InvoiceItem> InvoiceItem => Set<InvoiceItem>();
         public DbSet<PurchaseOrder> PurchaseOrder => Set<PurchaseOrder>();
@@ -73,7 +77,9 @@ namespace Inv.Persistence.Contexts
             modelBuilder.HasSequence<int>("CompatibleItemlID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("SupplierId", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("GRNID", schema: "dbo").StartsAt(1).IncrementsBy(1);
+            //modelBuilder.HasSequence<int>("GRNHeaderID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("GRNLineItemID", schema: "dbo").StartsAt(1).IncrementsBy(1);
+            //modelBuilder.HasSequence<int>("GRNDetailID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("InvoiceID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("POID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("POItemID", schema: "dbo").StartsAt(1).IncrementsBy(1);

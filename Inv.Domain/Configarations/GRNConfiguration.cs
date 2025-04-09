@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Inv.Domain.Configarations
 {
 
-        public class GRNConfiguration : IEntityTypeConfiguration<GRN>
+    public class GRNConfiguration : IEntityTypeConfiguration<GRN>
         {
             public void Configure(EntityTypeBuilder<GRN> builder)
             {
