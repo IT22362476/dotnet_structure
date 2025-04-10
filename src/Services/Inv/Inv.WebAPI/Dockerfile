@@ -26,7 +26,6 @@ COPY ["Services/Inv/Inv.Application/Inv.Application.csproj", "Services/Inv/Inv.A
 COPY ["Services/Inv/Inv.Domain/Inv.Domain.csproj", "Services/Inv/Inv.Domain/"]
 COPY ["Services/Inv/Inv.Infrastructure/Inv.Infrastructure.csproj", "Services/Inv/Inv.Infrastructure/"]
 COPY ["Services/Inv/Inv.Persistence/Inv.Persistence.csproj", "Services/Inv/Inv.Persistence/"]
-COPY ["Services/CommonLibrary/JwtTokenAuthentication.csproj", "Services/CommonLibrary/"]
 # Restore project dependencies
 RUN dotnet restore "./Services/Inv/Inv.WebAPI/Inv.WebAPI.csproj"
 
