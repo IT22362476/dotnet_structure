@@ -42,7 +42,7 @@ namespace Inv.Persistence.Repositories
 
                 var param = _unitOfWork.Repository<TheNumber>().Entities.Where(p => p.TheNumberName == "Rack").FirstOrDefault();
                 param.LastNumber = param.LastNumber + 1;
-                await _unitOfWork.Repository<TheNumber>().UpdateAsync(param, param.TheNumberSerialID);
+                await _unitOfWork.Repository<TheNumber>().UpdateAsync(param, param.TheNumberSerialID);               
 
                 // Save changes again to commit the Rack
                 await _unitOfWork.Save(cancellationToken);

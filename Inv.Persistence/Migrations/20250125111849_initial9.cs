@@ -15,7 +15,7 @@ namespace Inv.Persistence.Migrations
                 name: "Parameter",
                 schema: "Inv");
 
-            migrationBuilder.CreateTable(
+            /*migrationBuilder.CreateTable(
                 name: "TheNumbers",
                 schema: "Inv",
                 columns: table => new
@@ -36,7 +36,7 @@ namespace Inv.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TheNumbers", x => x.TheNumberSerialID);
-                });
+                });*/
             /*
             migrationBuilder.CreateIndex(
                 name: "IX_UOMConversion_UOMToID",

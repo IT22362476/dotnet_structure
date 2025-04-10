@@ -11,7 +11,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
+            /*migrationBuilder.DropColumn(
                 name: "ItemDes",
                 schema: "Inv",
                 table: "Item");
@@ -28,13 +28,13 @@ namespace Inv.Persistence.Migrations
                 schema: "Inv",
                 table: "Item",
                 type: "datetime2",
-                nullable: true);
+                nullable: true);*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
+            /*migrationBuilder.DropColumn(
                 name: "ApprovedBy",
                 schema: "Inv",
                 table: "Item");
@@ -51,7 +51,7 @@ namespace Inv.Persistence.Migrations
                 type: "nvarchar(50)",
                 maxLength: 50,
                 nullable: false,
-                defaultValue: "");
+                defaultValue: "");*/
         }
     }
 }

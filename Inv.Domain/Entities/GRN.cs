@@ -31,4 +31,7 @@ namespace Inv.Domain.Entities
         public ICollection<GRNLineItem>? GRNItem { get; set; }
     }
 
+
+
+
 }

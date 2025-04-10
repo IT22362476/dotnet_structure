@@ -33,9 +33,9 @@ namespace Inv.Persistence.Extensions
                  options.UseSqlServer(connectionString,
                  builder => {
                      builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName);
-                     builder.EnableRetryOnFailure(maxRetryCount: 3, // Number of retry attempts
+                    /* builder.EnableRetryOnFailure(maxRetryCount: 3, // Number of retry attempts
                 maxRetryDelay: TimeSpan.FromSeconds(5), // Delay between retries
-                errorNumbersToAdd: null);
+                errorNumbersToAdd: null);*/
 
                  })
                 .AddInterceptors(updateAuditableInterceptor).AddInterceptors(serviceProvider.GetRequiredService<SoftDeleteInterceptor>()).AddInterceptors(new AuditSaveChangesInterceptor());
@@ -52,6 +52,7 @@ namespace Inv.Persistence.Extensions
                 .AddTransient(typeof(IRackRepository), typeof(RackRepository))
                 .AddTransient(typeof(IBinLocationRepository), typeof(BinLocationRepository))
                 .AddTransient(typeof(IItemRepository), typeof(ItemRepository))
+                .AddTransient(typeof(IGRNRepository), typeof(GRNRepository))
                 .AddTransient(typeof(ISortHelper<>), typeof(SortHelper<>))
                 .AddHttpClient<IMessagingHubService, MessagingHubService>(client =>
                 {

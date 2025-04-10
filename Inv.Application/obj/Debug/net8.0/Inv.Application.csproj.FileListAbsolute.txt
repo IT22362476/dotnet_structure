@@ -34,3 +34,21 @@ D:\GitHub\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.dll
 D:\GitHub\NewInventory\Inv.Application\obj\Debug\net8.0\refint\Inv.Application.dll
 D:\GitHub\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.pdb
 D:\GitHub\NewInventory\Inv.Application\obj\Debug\net8.0\ref\Inv.Application.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\bin\Debug\net8.0\Inv.Application.deps.json
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\bin\Debug\net8.0\Inv.Application.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\bin\Debug\net8.0\Inv.Application.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\bin\Debug\net8.0\Inv.Domain.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\bin\Debug\net8.0\Inv.Shared.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\bin\Debug\net8.0\Inv.Domain.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\bin\Debug\net8.0\Inv.Shared.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.csproj.AssemblyReference.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.AssemblyInfoInputs.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.AssemblyInfo.cs
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.csproj.CoreCompileInputs.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.sourcelink.json
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Appl.4A16FC2C.Up2Date
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\refint\Inv.Application.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\Inv.Application.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Application\obj\Debug\net8.0\ref\Inv.Application.dll

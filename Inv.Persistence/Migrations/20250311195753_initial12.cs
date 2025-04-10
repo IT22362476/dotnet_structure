@@ -11,7 +11,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateSequence<int>(
+            /*migrationBuilder.CreateSequence<int>(
                 name: "InvoiceItemID",
                 schema: "dbo");
 
@@ -214,13 +214,13 @@ namespace Inv.Persistence.Migrations
                 column: "PurchaseOrderPOSerialID",
                 principalSchema: "Inv",
                 principalTable: "PurchaseOrder",
-                principalColumn: "POSerialID");
+                principalColumn: "POSerialID");*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+            /*migrationBuilder.DropForeignKey(
                 name: "FK_GRN_PurchaseOrder_PurchaseOrderPOSerialID",
                 schema: "Inv",
                 table: "GRN");
@@ -267,7 +267,7 @@ namespace Inv.Persistence.Migrations
 
             migrationBuilder.DropSequence(
                 name: "POItemID",
-                schema: "dbo");
+                schema: "dbo");*/
         }
     }
 }

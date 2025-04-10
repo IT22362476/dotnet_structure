@@ -27,11 +27,15 @@
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\CommonLibrary\JwtTokenAuthentication.csproj" />
 		<ProjectReference Include="..\Inv.Application\Inv.Application.csproj" />
 		<ProjectReference Include="..\Inv.Infrastructure\Inv.Infrastructure.csproj" />
 		<ProjectReference Include="..\Inv.Persistence\Inv.Persistence.csproj" />
 		<ProjectReference Include="..\Inv.Shared\Inv.Shared.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="JwtTokenAuthentication">
+	    <HintPath>..\_dll\JwtTokenAuthentication.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 	<ItemGroup>
 		<Content Update="appsettings.Production.json">

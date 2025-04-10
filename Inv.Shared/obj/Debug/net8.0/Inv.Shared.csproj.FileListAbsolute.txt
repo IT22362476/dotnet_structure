@@ -24,3 +24,16 @@ D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.dll
 D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\refint\Inv.Shared.dll
 D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.pdb
 D:\GitHub\NewInventory\Inv.Shared\obj\Debug\net8.0\ref\Inv.Shared.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\bin\Debug\net8.0\Inv.Shared.deps.json
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\bin\Debug\net8.0\Inv.Shared.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\bin\Debug\net8.0\Inv.Shared.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.csproj.AssemblyReference.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.AssemblyInfoInputs.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.AssemblyInfo.cs
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.csproj.CoreCompileInputs.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.sourcelink.json
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\refint\Inv.Shared.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\Inv.Shared.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Shared\obj\Debug\net8.0\ref\Inv.Shared.dll

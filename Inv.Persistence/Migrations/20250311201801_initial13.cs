@@ -10,7 +10,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+            /*migrationBuilder.DropForeignKey(
                 name: "FK_GRNLineItem_Item_ItemSerialID",
                 schema: "Inv",
                 table: "GRNLineItem");
@@ -119,13 +119,13 @@ namespace Inv.Persistence.Migrations
                 column: "PurchaseOrderPOSerialID",
                 principalSchema: "Inv",
                 principalTable: "PurchaseOrder",
-                principalColumn: "POSerialID");
+                principalColumn: "POSerialID");*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+            /*migrationBuilder.DropForeignKey(
                 name: "FK_GRNLineItem_Item_ItemSerialID",
                 schema: "Inv",
                 table: "GRNLineItem");
@@ -231,7 +231,7 @@ namespace Inv.Persistence.Migrations
                 principalSchema: "Inv",
                 principalTable: "PurchaseOrder",
                 principalColumn: "POSerialID",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.Cascade);*/
         }
     }
 }

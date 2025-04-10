@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "Daz9jOEjfY0fSqIi2P5PjEu0xbIs/A2vGPIv4Sm9ZUE=",
+  "Hash": "wFvX/LXmYRU5LewUHs72/gphf96Pj4XUveumKtZlJ+E=",
   "Source": "Inv.WebAPI",
   "BasePath": "_content/Inv.WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

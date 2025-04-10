@@ -742,38 +742,6 @@
   },
   {
     "ContainingType": "Inv.WebAPI.Controllers.GRNController",
-    "Method": "Create",
-    "RelativePath": "api/v1/inv/GRN",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "createDto",
-        "Type": "Inv.Application.DTOs.GRN.CreateGRNDto",
-        "IsRequired": true
-      },
-      {
-        "Name": "uniquePropertyNames",
-        "Type": "System.String[]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Inv.Application.DTOs.GRN.GetGRNDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "CreateGRN"
-  },
-  {
-    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
     "Method": "Update",
     "RelativePath": "api/v1/inv/GRN",
     "HttpMethod": "PUT",
@@ -844,6 +812,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "CreateGRN",
+    "RelativePath": "api/v1/inv/GRN/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Inv.Application.Features.GRN.Commands.CreateGRNCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Inv.WebAPI.Controllers.GRNController",
@@ -3514,38 +3508,6 @@
   },
   {
     "ContainingType": "Inv.WebAPI.Controllers.GRNController",
-    "Method": "Create",
-    "RelativePath": "api/v2/inv/GRN",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "createDto",
-        "Type": "Inv.Application.DTOs.GRN.CreateGRNDto",
-        "IsRequired": true
-      },
-      {
-        "Name": "uniquePropertyNames",
-        "Type": "System.String[]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Inv.Application.DTOs.GRN.GetGRNDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "CreateGRN"
-  },
-  {
-    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
     "Method": "Update",
     "RelativePath": "api/v2/inv/GRN",
     "HttpMethod": "PUT",
@@ -3616,6 +3578,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "CreateGRN",
+    "RelativePath": "api/v2/inv/GRN/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Inv.Application.Features.GRN.Commands.CreateGRNCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Inv.WebAPI.Controllers.GRNController",

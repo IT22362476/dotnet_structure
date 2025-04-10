@@ -1,5 +1,8 @@
 ﻿using Audit.EntityFramework;
 using AutoMapper.Configuration.Annotations;
+using Inv.Application.Interfaces.Repositories;
+using Inv.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 namespace Inv.WebAPI.Utility
@@ -57,7 +60,9 @@ namespace Inv.WebAPI.Utility
             string auditData = JsonSerializer.Serialize(root);
             return auditData;
         }
+
     }
+
     
     public class Column_Name
     {
