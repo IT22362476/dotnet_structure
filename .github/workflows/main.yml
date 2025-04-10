@@ -34,6 +34,6 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: src
-        file: src/Services/Inventory/Inv.WebAPI/Dockerfile
+        file: src/Services/Inv/Inv.WebAPI/Dockerfile
         push: true
         tags: prasanna1974/invwebapi:latest
