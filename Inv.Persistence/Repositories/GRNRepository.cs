@@ -37,25 +37,30 @@ namespace Inv.Persistence.Repositories
                 //    po => po.PurchaseOrderItem);
 
                 var purchaseOrder = await _unitOfWork.Repository<PurchaseOrder>().Entities
-                    //.Include(grnDetail => grnDetail.PurchaseOrderItem)
+                    .Include(po => po.PurchaseOrderItem)
                     .Where(po => po.POSerialID == grnDetail.SystemPOSerialID)
                     .FirstOrDefaultAsync();
+
+                if(purchaseOrder is null)
+                {
+                    return Result<int>.Failure($"Purchase order not found for the item {grnDetail.ItemSerialID}.");
+                }
 
                 if(purchaseOrder.PurchaseOrderItem == null || purchaseOrder.PurchaseOrderItem.Count == 0)
                 {
                     return Result<int>.Failure($"Purchase Details not found in Purchase Order, {grnDetail.SystemPOSerialID}.");
                 }
 
-                // Check if the line items exists in the purchase order
-                var purchaseOrderLineItem = purchaseOrder.PurchaseOrderItem.FirstOrDefault(x => x.POItemSerialID == grnDetail.SystemPOSerialID);
-                if (purchaseOrderLineItem == null)
+                // Check if the grn details exists in the purchase order
+                var purchaseOrderDetail = purchaseOrder.PurchaseOrderItem.FirstOrDefault(x => x.ItemSerialID == grnDetail.ItemSerialID);
+                if (purchaseOrderDetail == null)
                 {
-                    return Result<int>.Failure($"Item with Purchse Order Serial ID {grnDetail.SystemPOSerialID} not found.");
+                    return Result<int>.Failure($"Item not found in Purchse Order Serial ID {grnDetail.SystemPOSerialID}.");
                 }
                 else
                 {
                     // Check if the quantity is greater than the ordered quantity from PO
-                    if (grnDetail.Qty > purchaseOrderLineItem.Quantity)
+                    if (grnDetail.Qty > purchaseOrderDetail.Quantity)
                     {
                         return Result<int>.Failure($" Quantity of item {grnDetail.ItemSerialID} exceeds available quantity.");
                     }
@@ -80,9 +85,10 @@ namespace Inv.Persistence.Repositories
                     // Call the UpdateLastNumber method
                     await UpdateNumber.UpdateLastNumber(_unitOfWork, "GRNHeader", grn.CompSerialID);
                     await _unitOfWork.SaveNoCommitRoll(cancellationToken);
+                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
 
                     // get the last number
-                    var lastNumber =  await _unitOfWork.Repository<TheNumber>().Entities
+                    var lastNumber = await _unitOfWork.Repository<TheNumber>().Entities
                         .Where(nu => nu.TheNumberName == "GRNHeader" && nu.ComSerialID == grn.CompSerialID)
                         .FirstOrDefaultAsync(cancellationToken);
 
@@ -106,7 +112,7 @@ namespace Inv.Persistence.Repositories
                     }
 
                     // Save the updated GRN
-                    await _unitOfWork.Repository<GRNHeader>().UpdateAsync(grn, grn.GRNHeaderSerialID);
+                    //await _unitOfWork.Repository<GRNHeader>().UpdateAsync(grn, grn.GRNHeaderSerialID);
                     await _unitOfWork.SaveNoCommitRoll(cancellationToken);
 
                     // Deduct GRN quantity from the purchase order

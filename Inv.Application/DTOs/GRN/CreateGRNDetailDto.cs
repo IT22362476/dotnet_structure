@@ -1,4 +1,5 @@
-﻿using Inv.Application.Common.Mappings;
+﻿using AutoMapper;
+using Inv.Application.Common.Mappings;
 using Inv.Domain.Entities;
 
 namespace Inv.Application.DTOs.GRN
@@ -30,5 +31,10 @@ namespace Inv.Application.DTOs.GRN
         public int? AssetCount { get; set; }
 
         public string Remarks { get; set; } = string.Empty;
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<CreateGRNDetailDto, GRNDetail>();
+        }
     }
 }
