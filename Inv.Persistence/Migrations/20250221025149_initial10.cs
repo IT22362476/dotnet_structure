@@ -11,7 +11,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateSequence<int>(
+            /*migrationBuilder.CreateSequence<int>(
                 name: "GRNID",
                 schema: "dbo");
 
@@ -25,13 +25,13 @@ namespace Inv.Persistence.Migrations
 
             migrationBuilder.CreateSequence<int>(
                 name: "SupplierId",
-                schema: "dbo");
+                schema: "dbo");*/
 
    /*         migrationBuilder.CreateSequence<int>(
                 name: "TheNumberID",
                 schema: "dbo");*/
 
-            migrationBuilder.AlterColumn<int>(
+            /*migrationBuilder.AlterColumn<int>(
                 name: "LastNumber",
                 schema: "Inv",
                 table: "TheNumbers",
@@ -40,7 +40,7 @@ namespace Inv.Persistence.Migrations
                 defaultValue: 0,
                 oldClrType: typeof(int),
                 oldType: "int",
-                oldNullable: true);
+                oldNullable: true);*/
 
       /*      migrationBuilder.AddColumn<bool>(
                 name: "IsVoidBinLocation",
@@ -58,7 +58,7 @@ namespace Inv.Persistence.Migrations
                 nullable: false,
                 defaultValue: 0);*/
 
-            migrationBuilder.CreateTable(
+            /*migrationBuilder.CreateTable(
                 name: "GRN",
                 schema: "Inv",
                 columns: table => new
@@ -212,13 +212,13 @@ namespace Inv.Persistence.Migrations
                 schema: "Inv",
                 table: "Supplier",
                 column: "SupplierId",
-                unique: true);
+                unique: true);*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
+            /*migrationBuilder.DropTable(
                 name: "GRN",
                 schema: "Inv");
 
@@ -232,7 +232,7 @@ namespace Inv.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Supplier",
-                schema: "Inv");
+                schema: "Inv");*/
 
          /*   migrationBuilder.DropColumn(
                 name: "IsVoidBinLocation",
@@ -244,7 +244,7 @@ namespace Inv.Persistence.Migrations
                 schema: "Inv",
                 table: "BinLocation");*/
 
-            migrationBuilder.DropSequence(
+            /*migrationBuilder.DropSequence(
                 name: "GRNID",
                 schema: "dbo");
 
@@ -258,20 +258,20 @@ namespace Inv.Persistence.Migrations
 
             migrationBuilder.DropSequence(
                 name: "SupplierId",
-                schema: "dbo");
+                schema: "dbo");*/
 
    /*         migrationBuilder.DropSequence(
                 name: "TheNumberID",
                 schema: "dbo");*/
 
-            migrationBuilder.AlterColumn<int>(
+            /*migrationBuilder.AlterColumn<int>(
                 name: "LastNumber",
                 schema: "Inv",
                 table: "TheNumbers",
                 type: "int",
                 nullable: true,
                 oldClrType: typeof(int),
-                oldType: "int");
+                oldType: "int");*/
         }
     }
 }

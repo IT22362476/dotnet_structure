@@ -3,20 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250409113821_addgrntables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250409113821_addgrntables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F1D6A65B-B46F-4899-B5DD-C565ADCF1833}|Inv.WebAPI\\Inv.WebAPI.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F1D6A65B-B46F-4899-B5DD-C565ADCF1833}|Inv.WebAPI\\Inv.WebAPI.csproj|solutionrelative:inv.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250409113821_addgrntables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250409113821_addgrntables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250311203107_initial14.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250311203107_initial14.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250311201801_initial13.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250311201801_initial13.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250311195753_initial12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250311195753_initial12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250221030956_initial11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250221030956_initial11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250221025149_initial10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250221025149_initial10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250125111849_initial9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250125111849_initial9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20241220013816_initial8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20241220013816_initial8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20241209223725_initial7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20241209223725_initial7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20241209030922_initial6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20241209030922_initial6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20241208223247_initial5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20241208223247_initial5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20241207195433_initial4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20241207195433_initial4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20241207004451_initial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20241207004451_initial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\migrations\\20250311195753_initial12.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\migrations\\20250311195753_initial12.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\repositories\\grnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\repositories\\grnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.persistence\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.application\\features\\grn\\commands\\creategrncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|solutionrelative:inv.application\\features\\grn\\commands\\creategrncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C632DF1C-6A58-4B13-B67E-44E5490AC2B0}|Inv.Domain\\Inv.Domain.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.domain\\entities\\grndetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F1D6A65B-B46F-4899-B5DD-C565ADCF1833}|Inv.WebAPI\\Inv.WebAPI.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.webapi\\controllers\\grncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1D6A65B-B46F-4899-B5DD-C565ADCF1833}|Inv.WebAPI\\Inv.WebAPI.csproj|solutionrelative:inv.webapi\\controllers\\grncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.application\\features\\grn\\commands\\creategrncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|solutionrelative:inv.application\\features\\grn\\commands\\creategrncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\inv.application\\interfaces\\repositories\\igrnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,61 +122,219 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250409113821_AddGRNTables.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
-              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
-              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
-              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAAM4AAAAmAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "20250311195753_initial12.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311195753_initial12.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250311195753_initial12.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311195753_initial12.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250311195753_initial12.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T11:38:21.466Z",
+              "WhenOpened": "2025-04-10T04:39:21.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.WebAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Inv.WebAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.WebAPI\\appsettings.Development.json*",
-              "RelativeToolTip": "Inv.WebAPI\\appsettings.Development.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-09T11:12:44.557Z",
+              "DocumentIndex": 3,
+              "Title": "20250311201801_initial13.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311201801_initial13.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250311201801_initial13.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311201801_initial13.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250311201801_initial13.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:51:54.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "20250311203107_initial14.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311203107_initial14.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250311203107_initial14.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311203107_initial14.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250311203107_initial14.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAtwIYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:52:41.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250409113821_AddGRNTables.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250409113821_AddGRNTables.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:31:40.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.WebAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Inv.WebAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.WebAPI\\appsettings.Development.json",
+              "RelativeToolTip": "Inv.WebAPI\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-10T05:04:44.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250221030956_initial11.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250221030956_initial11.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250221030956_initial11.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250221030956_initial11.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250221030956_initial11.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAApwGAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:49:35.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250221025149_initial10.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250221025149_initial10.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250221025149_initial10.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250221025149_initial10.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250221025149_initial10.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAtwA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:47:48.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250125111849_initial9.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250125111849_initial9.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250125111849_initial9.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250125111849_initial9.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250125111849_initial9.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAIAwwBEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:46:51.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20241220013816_initial8.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241220013816_initial8.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20241220013816_initial8.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241220013816_initial8.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20241220013816_initial8.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwCQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:46:26.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20241209223725_initial7.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241209223725_initial7.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20241209223725_initial7.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241209223725_initial7.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20241209223725_initial7.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:46:07.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20241209030922_initial6.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241209030922_initial6.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20241209030922_initial6.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241209030922_initial6.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20241209030922_initial6.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:45:40.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20241208223247_initial5.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241208223247_initial5.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20241208223247_initial5.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241208223247_initial5.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20241208223247_initial5.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:45:06.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20241207195433_initial4.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241207195433_initial4.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20241207195433_initial4.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241207195433_initial4.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20241207195433_initial4.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAswIgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:43:09.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20241207004451_initial3.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241207004451_initial3.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20241207004451_initial3.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20241207004451_initial3.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20241207004451_initial3.cs",
+              "ViewState": "AgIAAOUBAAAAAAAAAAAswO0BAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:40:33.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250311195753_initial12.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311195753_initial12.Designer.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Migrations\\20250311195753_initial12.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Migrations\\20250311195753_initial12.Designer.cs",
+              "RelativeToolTip": "Inv.Persistence\\Migrations\\20250311195753_initial12.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T04:39:21.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "GRNRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Repositories\\GRNRepository.cs",
               "RelativeDocumentMoniker": "Inv.Persistence\\Repositories\\GRNRepository.cs",
               "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Repositories\\GRNRepository.cs",
               "RelativeToolTip": "Inv.Persistence\\Repositories\\GRNRepository.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAIAwwFAAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:42:52.524Z"
+              "WhenOpened": "2025-04-09T07:42:52.524Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GRNDetail.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Domain\\Entities\\GRNDetail.cs",
-              "RelativeDocumentMoniker": "Inv.Domain\\Entities\\GRNDetail.cs",
-              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Domain\\Entities\\GRNDetail.cs",
-              "RelativeToolTip": "Inv.Domain\\Entities\\GRNDetail.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAxwEAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T11:29:00.01Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
               "Title": "GRNHeader.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Domain\\Entities\\GRNHeader.cs",
               "RelativeDocumentMoniker": "Inv.Domain\\Entities\\GRNHeader.cs",
@@ -136,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 20,
               "Title": "GRNController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.WebAPI\\Controllers\\GRNController.cs",
               "RelativeDocumentMoniker": "Inv.WebAPI\\Controllers\\GRNController.cs",
@@ -148,31 +358,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwE8AAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T15:12:47.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "CreateGRNCommand.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs",
               "RelativeDocumentMoniker": "Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs",
               "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs",
               "RelativeToolTip": "Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwCIAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAgwDsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T05:44:34.41Z"
+              "WhenOpened": "2025-04-09T05:44:34.41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Inv.Persistence\\Contexts\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwEoAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T15:12:47.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GRNDetail.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Domain\\Entities\\GRNDetail.cs",
+              "RelativeDocumentMoniker": "Inv.Domain\\Entities\\GRNDetail.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Domain\\Entities\\GRNDetail.cs",
+              "RelativeToolTip": "Inv.Domain\\Entities\\GRNDetail.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAxwEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T11:29:00.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "IServiceCollectionExtensions.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Extensions\\IServiceCollectionExtensions.cs",
               "RelativeDocumentMoniker": "Inv.Persistence\\Extensions\\IServiceCollectionExtensions.cs",
@@ -184,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "IGRNRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Application\\Interfaces\\Repositories\\IGRNRepository.cs",
               "RelativeDocumentMoniker": "Inv.Application\\Interfaces\\Repositories\\IGRNRepository.cs",
@@ -196,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "CreateGRNDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Application\\DTOs\\GRN\\CreateGRNDetailDto.cs",
               "RelativeDocumentMoniker": "Inv.Application\\DTOs\\GRN\\CreateGRNDetailDto.cs",
@@ -208,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "GRNDetailConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Domain\\Configarations\\GRNDetailConfiguration.cs",
               "RelativeDocumentMoniker": "Inv.Domain\\Configarations\\GRNDetailConfiguration.cs",
@@ -220,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 25,
               "Title": "GRNHeaderConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Domain\\Configarations\\GRNHeaderConfiguration.cs",
               "RelativeDocumentMoniker": "Inv.Domain\\Configarations\\GRNHeaderConfiguration.cs",
@@ -232,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 27,
               "Title": "Inv.WebAPI.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.WebAPI\\Inv.WebAPI.csproj",
               "RelativeDocumentMoniker": "Inv.WebAPI\\Inv.WebAPI.csproj",
@@ -244,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 26,
               "Title": "Inv.Persistence.csproj",
               "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\Inv.Persistence\\Inv.Persistence.csproj",
               "RelativeDocumentMoniker": "Inv.Persistence\\Inv.Persistence.csproj",

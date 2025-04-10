@@ -11,7 +11,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateSequence<int>(
+           /*migrationBuilder.CreateSequence<int>(
                 name: "BinLctnID",
                 schema: "dbo");
 
@@ -485,13 +485,13 @@ namespace Inv.Persistence.Migrations
                 schema: "Inv",
                 table: "Zone",
                 column: "ZoneID",
-                unique: true);
+                unique: true);*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
+            /*migrationBuilder.DropTable(
                 name: "BinLocation",
                 schema: "Inv");
 
@@ -648,7 +648,7 @@ namespace Inv.Persistence.Migrations
                 oldClrType: typeof(string),
                 oldType: "nvarchar(50)",
                 oldMaxLength: 50,
-                oldNullable: true);
+                oldNullable: true);*/
         }
     }
 }

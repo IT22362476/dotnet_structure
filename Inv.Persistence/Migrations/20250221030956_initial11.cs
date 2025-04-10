@@ -10,7 +10,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateIndex(
+            /*migrationBuilder.CreateIndex(
                 name: "IX_Invoice_GRNSerialID",
                 schema: "Inv",
                 table: "Invoice",
@@ -88,13 +88,13 @@ namespace Inv.Persistence.Migrations
                 principalSchema: "Inv",
                 principalTable: "Supplier",
                 principalColumn: "SupplierSerialId",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Restrict);*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+            /*migrationBuilder.DropForeignKey(
                 name: "FK_GRN_Supplier_SupplierSerialID",
                 schema: "Inv",
                 table: "GRN");
@@ -142,7 +142,7 @@ namespace Inv.Persistence.Migrations
             migrationBuilder.DropIndex(
                 name: "IX_GRN_SupplierSerialID",
                 schema: "Inv",
-                table: "GRN");
+                table: "GRN");*/
         }
     }
 }

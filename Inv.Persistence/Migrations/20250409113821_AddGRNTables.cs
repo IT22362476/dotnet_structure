@@ -11,7 +11,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+           /* migrationBuilder.DropForeignKey(
                 name: "FK_GRNLineItem_Item_ItemSerialID",
                 schema: "Inv",
                 table: "GRNLineItem");
@@ -70,7 +70,7 @@ namespace Inv.Persistence.Migrations
                 nullable: false,
                 oldClrType: typeof(int),
                 oldType: "int")
-                .OldAnnotation("SqlServer:Identity", "1, 1");
+                .OldAnnotation("SqlServer:Identity", "1, 1");*/
 
             migrationBuilder.CreateTable(
                 name: "GRNHeader",
@@ -162,11 +162,11 @@ namespace Inv.Persistence.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
+            /*migrationBuilder.CreateIndex(
                 name: "IX_GRNLineItem_POItemSerialID",
                 schema: "Inv",
                 table: "GRNLineItem",
-                column: "POItemSerialID");
+                column: "POItemSerialID");*/
 
             migrationBuilder.CreateIndex(
                 name: "IX_GRNDetail_GRNHeaderSerialID",
@@ -206,7 +206,7 @@ namespace Inv.Persistence.Migrations
                 table: "GRNHeader",
                 column: "WHSerialID");
 
-            migrationBuilder.AddForeignKey(
+            /*migrationBuilder.AddForeignKey(
                 name: "FK_GRNLineItem_PurchaseOrderItem_POItemSerialID",
                 schema: "Inv",
                 table: "GRNLineItem",
@@ -224,13 +224,13 @@ namespace Inv.Persistence.Migrations
                 principalSchema: "Inv",
                 principalTable: "PurchaseOrder",
                 principalColumn: "POSerialID",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.Cascade);*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+           /* migrationBuilder.DropForeignKey(
                 name: "FK_GRNLineItem_PurchaseOrderItem_POItemSerialID",
                 schema: "Inv",
                 table: "GRNLineItem");
@@ -238,7 +238,7 @@ namespace Inv.Persistence.Migrations
             migrationBuilder.DropForeignKey(
                 name: "FK_PurchaseOrderItem_PurchaseOrder_POSerialID",
                 schema: "Inv",
-                table: "PurchaseOrderItem");
+                table: "PurchaseOrderItem");*/
 
             migrationBuilder.DropTable(
                 name: "GRNDetail",
@@ -248,7 +248,7 @@ namespace Inv.Persistence.Migrations
                 name: "GRNHeader",
                 schema: "Inv");
 
-            migrationBuilder.DropIndex(
+            /*migrationBuilder.DropIndex(
                 name: "IX_GRNLineItem_POItemSerialID",
                 schema: "Inv",
                 table: "GRNLineItem");
@@ -335,7 +335,7 @@ namespace Inv.Persistence.Migrations
                 column: "PurchaseOrderPOSerialID",
                 principalSchema: "Inv",
                 principalTable: "PurchaseOrder",
-                principalColumn: "POSerialID");
+                principalColumn: "POSerialID");*/
         }
     }
 }

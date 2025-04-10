@@ -10,27 +10,27 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
+            /*migrationBuilder.AlterColumn<string>(
                 name: "Column",
                 schema: "Inv",
                 table: "BinLocation",
                 type: "nvarchar(max)",
                 nullable: false,
                 oldClrType: typeof(int),
-                oldType: "int");
+                oldType: "int");*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<int>(
+            /*migrationBuilder.AlterColumn<int>(
                 name: "Column",
                 schema: "Inv",
                 table: "BinLocation",
                 type: "int",
                 nullable: false,
                 oldClrType: typeof(string),
-                oldType: "nvarchar(max)");
+                oldType: "nvarchar(max)");*/
         }
     }
 }

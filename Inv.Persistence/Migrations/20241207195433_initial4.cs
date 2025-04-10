@@ -11,7 +11,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateSequence<int>(
+            /*migrationBuilder.CreateSequence<int>(
                 name: "CompatibleItemlID",
                 schema: "dbo");
 
@@ -114,13 +114,13 @@ namespace Inv.Persistence.Migrations
                 schema: "Inv",
                 table: "CusPriceCategory",
                 column: "IsDeleted",
-                filter: "[IsDeleted] = 1");
+                filter: "[IsDeleted] = 1");*/
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
+            /*migrationBuilder.DropTable(
                 name: "CompatibleItem",
                 schema: "Inv");
 
@@ -134,7 +134,7 @@ namespace Inv.Persistence.Migrations
 
             migrationBuilder.DropSequence(
                 name: "CusPriceCatID",
-                schema: "dbo");
+                schema: "dbo");*/
         }
     }
 }

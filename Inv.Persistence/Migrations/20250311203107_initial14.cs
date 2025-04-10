@@ -10,30 +10,30 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+            /*migrationBuilder.DropForeignKey(
                 name: "FK_GRN_PurchaseOrder_PurchaseOrderPOSerialID",
                 schema: "Inv",
-                table: "GRN");
+                table: "GRN");*/
 
  /*           migrationBuilder.DropForeignKey(
                 name: "FK_PurchaseOrder_Supplier_SupplierSerialId",
                 schema: "Inv",
                 table: "PurchaseOrder");*/
 
-            migrationBuilder.DropIndex(
+            /*migrationBuilder.DropIndex(
                 name: "IX_GRN_PurchaseOrderPOSerialID",
                 schema: "Inv",
-                table: "GRN");
+                table: "GRN");*/
 
 /*            migrationBuilder.DropColumn(
                 name: "SupplierSerialID",
                 schema: "Inv",
                 table: "PurchaseOrder");*/
 
-            migrationBuilder.DropColumn(
+            /*migrationBuilder.DropColumn(
                 name: "PurchaseOrderPOSerialID",
                 schema: "Inv",
-                table: "GRN");
+                table: "GRN");*/
 
         /*    migrationBuilder.RenameColumn(
                 name: "SupplierSerialId",
@@ -47,7 +47,7 @@ namespace Inv.Persistence.Migrations
                 table: "PurchaseOrder",
                 newName: "IX_PurchaseOrder_SupplierSerialID");*/
 
-            migrationBuilder.AlterColumn<int>(
+            /*migrationBuilder.AlterColumn<int>(
                 name: "SupplierSerialID",
                 schema: "Inv",
                 table: "PurchaseOrder",
@@ -72,7 +72,7 @@ namespace Inv.Persistence.Migrations
                 principalSchema: "Inv",
                 principalTable: "PurchaseOrder",
                 principalColumn: "POSerialID",
-                onDelete: ReferentialAction.Restrict);
+                onDelete: ReferentialAction.Restrict);*/
 
 /*            migrationBuilder.AddForeignKey(
                 name: "FK_PurchaseOrder_Supplier_SupplierSerialID",
@@ -88,7 +88,7 @@ namespace Inv.Persistence.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
+            /*migrationBuilder.DropForeignKey(
                 name: "FK_GRN_PurchaseOrder_POSerialID",
                 schema: "Inv",
                 table: "GRN");
@@ -101,7 +101,7 @@ namespace Inv.Persistence.Migrations
             migrationBuilder.DropIndex(
                 name: "IX_GRN_POSerialID",
                 schema: "Inv",
-                table: "GRN");
+                table: "GRN");*/
 
       /*      migrationBuilder.RenameColumn(
                 name: "SupplierSerialID",
@@ -132,7 +132,7 @@ namespace Inv.Persistence.Migrations
                 nullable: false,
                 defaultValue: 0);*/
 
-            migrationBuilder.AddColumn<int>(
+            /*migrationBuilder.AddColumn<int>(
                 name: "PurchaseOrderPOSerialID",
                 schema: "Inv",
                 table: "GRN",
@@ -152,7 +152,7 @@ namespace Inv.Persistence.Migrations
                 column: "PurchaseOrderPOSerialID",
                 principalSchema: "Inv",
                 principalTable: "PurchaseOrder",
-                principalColumn: "POSerialID");
+                principalColumn: "POSerialID");*/
 
  /*           migrationBuilder.AddForeignKey(
                 name: "FK_PurchaseOrder_Supplier_SupplierSerialId",

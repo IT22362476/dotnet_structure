@@ -1,10 +1,10 @@
-﻿using System.Data.Entity;
-using AutoMapper;
+﻿using AutoMapper;
 using Inv.Application.Features.GRN.Commands;
 using Inv.Application.Interfaces.Repositories;
 using Inv.Domain.Entities;
 using Inv.Persistence.Helper;
 using Inv.Shared;
+using Microsoft.EntityFrameworkCore;
 
 namespace Inv.Persistence.Repositories
 {
@@ -26,12 +26,25 @@ namespace Inv.Persistence.Repositories
                 return Result<int>.Failure("GRN Details are required.");
             }
 
+            // check for correct bin location**
+
+
             foreach (var grnDetail in request.GRNDetails)
             {
                 // Check if the PO of the grn item exists
-                var purchaseOrder = await _unitOfWork.Repository<PurchaseOrder>().GetEntityWithIncludesAsync(
-                    po => po.POSerialID == grnDetail.SystemPOSerialID,
-                    po => po.PurchaseOrderItem);
+                //var purchaseOrder = await _unitOfWork.Repository<PurchaseOrder>().GetEntityWithIncludesAsync(
+                //    po => po.POSerialID == grnDetail.SystemPOSerialID,
+                //    po => po.PurchaseOrderItem);
+
+                var purchaseOrder = await _unitOfWork.Repository<PurchaseOrder>().Entities
+                    //.Include(grnDetail => grnDetail.PurchaseOrderItem)
+                    .Where(po => po.POSerialID == grnDetail.SystemPOSerialID)
+                    .FirstOrDefaultAsync();
+
+                if(purchaseOrder.PurchaseOrderItem == null || purchaseOrder.PurchaseOrderItem.Count == 0)
+                {
+                    return Result<int>.Failure($"Purchase Details not found in Purchase Order, {grnDetail.SystemPOSerialID}.");
+                }
 
                 // Check if the line items exists in the purchase order
                 var purchaseOrderLineItem = purchaseOrder.PurchaseOrderItem.FirstOrDefault(x => x.POItemSerialID == grnDetail.SystemPOSerialID);
@@ -54,7 +67,7 @@ namespace Inv.Persistence.Repositories
             var grn = _mapper.Map<GRNHeader>(request);
             if (grn is null)
             {
-                return Result<int>.Failure("Failed to map the request to GRN entity.");
+                return Result<int>.Failure("Failed to map the request to GRN.");
             }
             
             // Add the GRN to the repository
