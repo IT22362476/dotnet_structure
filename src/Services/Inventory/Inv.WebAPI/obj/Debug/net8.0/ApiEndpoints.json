@@ -1,0 +1,5381 @@
+[
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/BinLocation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.BinLocation.GetBinLocationDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetBinLocation"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/BinLocation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.BinLocation.GetBinLocationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/BinLocation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "CreateBinLocation",
+    "RelativePath": "api/v1/inv/BinLocation/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationCommand",
+        "Type": "Inv.Application.Features.BinLocation.Command.CreateBinLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "GetSkuBinlocation",
+    "RelativePath": "api/v1/inv/BinLocation/GetSkuBinLocation/{itemSerialID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemSerialID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.BinLocation.GetBinLocationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "GetItemWithPagination",
+    "RelativePath": "api/v1/inv/BinLocation/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[Inv.Shared.PaginatedResult\u00601[[Inv.Application.DTOs.BinLocation.GetBinLocationsWithPaginationDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Inv.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "UpdateBinLocation",
+    "RelativePath": "api/v1/inv/BinLocation/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateBinLocation",
+        "Type": "Inv.Application.Features.BinLocation.Command.UpdateBinLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Brand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Brand.GetBrandDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetBrand"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/Brand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Brand.CreateBrandDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Brand.GetBrandDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateBrand"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Brand",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Brand.UpdateBrandDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Brand.GetBrandDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Brand/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Brand.GetBrandDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Brand/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/BrandItemType/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.BrandItemType.GetBrandItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/BrandItemType/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "CreateBrandItemType",
+    "RelativePath": "api/v1/inv/BrandItemType/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandItemTypeCommand",
+        "Type": "Inv.Application.Features.BrandItemType.Command.CreateBrandItemTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "GetBrandItemType",
+    "RelativePath": "api/v1/inv/BrandItemType/GetBrandItemType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.BrandItemType.GetBrandItemTypeDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "UpdateBrandItemType",
+    "RelativePath": "api/v1/inv/BrandItemType/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandItemTypeCommand",
+        "Type": "Inv.Application.Features.BrandItemType.Command.UpdateBrandItemTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/CompatibleItem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetCompatibleItem"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/CompatibleItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.CompatibleItem.CreateCompatibleItemDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateCompatibleItem"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/CompatibleItem",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.CompatibleItem.UpdateCompatibleItemDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/CompatibleItem/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/CompatibleItem/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/CusPriceCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetCusPriceCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/CusPriceCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.CusPriceCategory.CreateCusPriceCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateCusPriceCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/CusPriceCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.CusPriceCategory.UpdateCusPriceCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/CusPriceCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/CusPriceCategory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/GRN",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.GRN.GetGRNDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetGRN"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/GRN",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.GRN.UpdateGRNDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.GRN.GetGRNDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/GRN/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.GRN.GetGRNDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/GRN/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "CreateGRN",
+    "RelativePath": "api/v1/inv/GRN/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Inv.Application.Features.GRN.Commands.CreateGRNCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "GetGrnsByItem",
+    "RelativePath": "api/v1/inv/GRN/item/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Inv.Application.DTOs.GRN.GetGRNDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Invoice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Invoice.GetInvoiceDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetInvoice"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/Invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Invoice.CreateInvoiceDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Invoice.GetInvoiceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateInvoice"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Invoice",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Invoice.UpdateInvoiceDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Invoice.GetInvoiceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Invoice/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Invoice.GetInvoiceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Invoice/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "GetGrnsByItem",
+    "RelativePath": "api/v1/inv/Invoice/GRN/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Inv.Application.DTOs.Invoice.GetInvoiceByGRNDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Item.GetItemDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetItems"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Item",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Item.UpdateItemDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Item.GetItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Item/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Item.GetItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Item/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "GetApprovedItemWithPagination",
+    "RelativePath": "api/v1/inv/Item/approved/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[Inv.Shared.PaginatedResult\u00601[[Inv.Application.DTOs.Item.GetItemsWithPaginationDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Inv.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "GetItemCodes",
+    "RelativePath": "api/v1/inv/Item/codes/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Item.GetItemCodeDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "CreateItem",
+    "RelativePath": "api/v1/inv/Item/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemCommand",
+        "Type": "Inv.Application.Features.Item.Command.CreateItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "GetItemWithPagination",
+    "RelativePath": "api/v1/inv/Item/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[Inv.Shared.PaginatedResult\u00601[[Inv.Application.DTOs.Item.GetItemsWithPaginationDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Inv.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "UpdateItem",
+    "RelativePath": "api/v1/inv/Item/Update",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemCommand",
+        "Type": "Inv.Application.Features.Item.Command.UpdateItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/ItemType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.ItemType.GetItemTypeDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetItemType"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/ItemType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.ItemType.CreateItemTypeDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.ItemType.GetItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateGetItemType"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/ItemType",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.ItemType.UpdateItemTypeDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.ItemType.GetItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/ItemType/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.ItemType.GetItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/ItemType/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/MainCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.MainCategory.GetMainCategoryDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetMainCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/MainCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.MainCategory.CreateMainCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.MainCategory.GetMainCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateMainCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/MainCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.MainCategory.UpdateMainCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.MainCategory.GetMainCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/MainCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.MainCategory.GetMainCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/MainCategory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/Model",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Model.CreateModelDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Model.GetModelDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateModel"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Model",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Model.UpdateModelDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Model.GetModelDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Model/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Model.GetModelDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Model/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "GetModels",
+    "RelativePath": "api/v1/inv/Model/GetModels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Model.GetModelDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Rack",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Rack.GetRackDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetRack"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Rack/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Rack.GetRackDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Rack/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "CreateRack",
+    "RelativePath": "api/v1/inv/Rack/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rackCommand",
+        "Type": "Inv.Application.Features.Rack.Command.CreateRackCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "GetNextRackCode",
+    "RelativePath": "api/v1/inv/Rack/GetNextRackCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "GetItemWithPagination",
+    "RelativePath": "api/v1/inv/Rack/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[Inv.Shared.PaginatedResult\u00601[[Inv.Application.DTOs.Rack.GetRacksWithPaginationDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Inv.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "UpdateRack",
+    "RelativePath": "api/v1/inv/Rack/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRack",
+        "Type": "Inv.Application.Features.Rack.Command.UpdateRackCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Store",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Store.GetStoreDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetStore"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/Store",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Store.CreateStoreDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Store.GetStoreDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateStore"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Store",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Store.UpdateStoreDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Store.GetStoreDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Store/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Store.GetStoreDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Store/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/SubCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.SubCategory.CreateSubCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.SubCategory.GetSubCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateSubCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/SubCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.SubCategory.UpdateSubCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.SubCategory.GetSubCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/SubCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.SubCategory.GetSubCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/SubCategory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "GetSubCategories",
+    "RelativePath": "api/v1/inv/SubCategory/GetSubCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.SubCategory.GetSubCategoryDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Supplier",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Supplier.GetSupplierDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetSupplier"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/Supplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Supplier.CreateSupplierDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Supplier.GetSupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateSupplier"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Supplier",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Supplier.UpdateSupplierDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Supplier.GetSupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Supplier/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Supplier.GetSupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Supplier/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/UOM",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.UOM.GetUOMDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetUOM"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/UOM",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.UOM.CreateUOMDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOM.GetUOMDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateUOM"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/UOM",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.UOM.UpdateUOMDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOM.GetUOMDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/UOM/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOM.GetUOMDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/UOM/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/UOMConversion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.UOMConversion.GetUOMConversionDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetUOMConversion"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/UOMConversion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.UOMConversion.CreateUOMConversionDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOMConversion.GetUOMConversionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateUOMConversion"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/UOMConversion",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.UOMConversion.UpdateUOMConversionDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOMConversion.GetUOMConversionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/UOMConversion/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOMConversion.GetUOMConversionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/UOMConversion/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "GetUomConversionsWithPagination",
+    "RelativePath": "api/v1/inv/UOMConversion/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[Inv.Shared.PaginatedResult\u00601[[Inv.Application.DTOs.UOMConversion.GetUomConversionsWithPaginationDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Inv.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Warehouse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Warehouse.GetWarehouseDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWarehouse"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/Warehouse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Warehouse.CreateWarehouseDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Warehouse.GetWarehouseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateWarehouse"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Warehouse",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Warehouse.UpdateWarehouseDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Warehouse.GetWarehouseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Warehouse/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Warehouse.GetWarehouseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Warehouse/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/inv/Zone",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Zone.GetZoneDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetZone"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Create",
+    "RelativePath": "api/v1/inv/Zone",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Zone.CreateZoneDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Zone.GetZoneDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateZone"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Update",
+    "RelativePath": "api/v1/inv/Zone",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Zone.UpdateZoneDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Zone.GetZoneDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Get",
+    "RelativePath": "api/v1/inv/Zone/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Zone.GetZoneDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/inv/Zone/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/BinLocation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.BinLocation.GetBinLocationDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetBinLocation"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/BinLocation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.BinLocation.GetBinLocationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/BinLocation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "CreateBinLocation",
+    "RelativePath": "api/v2/inv/BinLocation/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationCommand",
+        "Type": "Inv.Application.Features.BinLocation.Command.CreateBinLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "GetSkuBinlocation",
+    "RelativePath": "api/v2/inv/BinLocation/GetSkuBinLocation/{itemSerialID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemSerialID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.BinLocation.GetBinLocationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BinLocationController",
+    "Method": "UpdateBinLocation",
+    "RelativePath": "api/v2/inv/BinLocation/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateBinLocation",
+        "Type": "Inv.Application.Features.BinLocation.Command.UpdateBinLocationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Brand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Brand.GetBrandDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetBrand"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/Brand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Brand.CreateBrandDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Brand.GetBrandDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateBrand"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Brand",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Brand.UpdateBrandDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Brand.GetBrandDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Brand/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Brand.GetBrandDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Brand/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/BrandItemType/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.BrandItemType.GetBrandItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/BrandItemType/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "CreateBrandItemType",
+    "RelativePath": "api/v2/inv/BrandItemType/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandItemTypeCommand",
+        "Type": "Inv.Application.Features.BrandItemType.Command.CreateBrandItemTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "GetBrandItemType",
+    "RelativePath": "api/v2/inv/BrandItemType/GetBrandItemType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.BrandItemType.GetBrandItemTypeDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.BrandItemTypeController",
+    "Method": "UpdateBrandItemType",
+    "RelativePath": "api/v2/inv/BrandItemType/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandItemTypeCommand",
+        "Type": "Inv.Application.Features.BrandItemType.Command.UpdateBrandItemTypeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/CompatibleItem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetCompatibleItem"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/CompatibleItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.CompatibleItem.CreateCompatibleItemDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateCompatibleItem"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/CompatibleItem",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.CompatibleItem.UpdateCompatibleItemDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/CompatibleItem/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CompatibleItem.GetCompatibleItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CompatibleItemController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/CompatibleItem/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/CusPriceCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetCusPriceCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/CusPriceCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.CusPriceCategory.CreateCusPriceCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateCusPriceCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/CusPriceCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.CusPriceCategory.UpdateCusPriceCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/CusPriceCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.CusPriceCategory.GetCusPriceCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.CusPriceCategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/CusPriceCategory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/GRN",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.GRN.GetGRNDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetGRN"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/GRN",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.GRN.UpdateGRNDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.GRN.GetGRNDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/GRN/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.GRN.GetGRNDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/GRN/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "CreateGRN",
+    "RelativePath": "api/v2/inv/GRN/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Inv.Application.Features.GRN.Commands.CreateGRNCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.GRNController",
+    "Method": "GetGrnsByItem",
+    "RelativePath": "api/v2/inv/GRN/item/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Inv.Application.DTOs.GRN.GetGRNDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Invoice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Invoice.GetInvoiceDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetInvoice"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/Invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Invoice.CreateInvoiceDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Invoice.GetInvoiceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateInvoice"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Invoice",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Invoice.UpdateInvoiceDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Invoice.GetInvoiceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Invoice/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Invoice.GetInvoiceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Invoice/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.InvoiceController",
+    "Method": "GetGrnsByItem",
+    "RelativePath": "api/v2/inv/Invoice/GRN/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Inv.Application.DTOs.Invoice.GetInvoiceByGRNDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Item.GetItemDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetItems"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Item",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Item.UpdateItemDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Item.GetItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Item/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Item.GetItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Item/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "GetItemCodes",
+    "RelativePath": "api/v2/inv/Item/codes/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Item.GetItemCodeDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "CreateItem",
+    "RelativePath": "api/v2/inv/Item/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemCommand",
+        "Type": "Inv.Application.Features.Item.Command.CreateItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemController",
+    "Method": "UpdateItem",
+    "RelativePath": "api/v2/inv/Item/Update",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemCommand",
+        "Type": "Inv.Application.Features.Item.Command.UpdateItemCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/ItemType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.ItemType.GetItemTypeDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetItemType"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/ItemType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.ItemType.CreateItemTypeDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.ItemType.GetItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateGetItemType"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/ItemType",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.ItemType.UpdateItemTypeDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.ItemType.GetItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/ItemType/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.ItemType.GetItemTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ItemTypeController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/ItemType/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/MainCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.MainCategory.GetMainCategoryDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetMainCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/MainCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.MainCategory.CreateMainCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.MainCategory.GetMainCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateMainCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/MainCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.MainCategory.UpdateMainCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.MainCategory.GetMainCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/MainCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.MainCategory.GetMainCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.MainCategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/MainCategory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/Model",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Model.CreateModelDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Model.GetModelDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateModel"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Model",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Model.UpdateModelDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Model.GetModelDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Model/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Model.GetModelDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Model/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ModelController",
+    "Method": "GetModels",
+    "RelativePath": "api/v2/inv/Model/GetModels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Model.GetModelDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Rack",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Rack.GetRackDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetRack"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Rack/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Rack.GetRackDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Rack/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "CreateRack",
+    "RelativePath": "api/v2/inv/Rack/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rackCommand",
+        "Type": "Inv.Application.Features.Rack.Command.CreateRackCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "GetNextRackCode",
+    "RelativePath": "api/v2/inv/Rack/GetNextRackCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.RackController",
+    "Method": "UpdateRack",
+    "RelativePath": "api/v2/inv/Rack/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRack",
+        "Type": "Inv.Application.Features.Rack.Command.UpdateRackCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Inv.Shared.Result\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Store",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Store.GetStoreDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetStore"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/Store",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Store.CreateStoreDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Store.GetStoreDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateStore"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Store",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Store.UpdateStoreDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Store.GetStoreDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Store/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Store.GetStoreDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.StoreController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Store/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/SubCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.SubCategory.CreateSubCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.SubCategory.GetSubCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateSubCategory"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/SubCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.SubCategory.UpdateSubCategoryDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.SubCategory.GetSubCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/SubCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.SubCategory.GetSubCategoryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/SubCategory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SubCategoryController",
+    "Method": "GetSubCategories",
+    "RelativePath": "api/v2/inv/SubCategory/GetSubCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.SubCategory.GetSubCategoryDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Supplier",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Supplier.GetSupplierDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetSupplier"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/Supplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Supplier.CreateSupplierDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Supplier.GetSupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateSupplier"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Supplier",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Supplier.UpdateSupplierDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Supplier.GetSupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Supplier/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Supplier.GetSupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.SupplierController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Supplier/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/UOM",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.UOM.GetUOMDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetUOM"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/UOM",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.UOM.CreateUOMDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOM.GetUOMDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateUOM"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/UOM",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.UOM.UpdateUOMDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOM.GetUOMDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/UOM/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOM.GetUOMDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/UOM/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/UOMConversion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.UOMConversion.GetUOMConversionDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetUOMConversion"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/UOMConversion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.UOMConversion.CreateUOMConversionDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOMConversion.GetUOMConversionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateUOMConversion"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/UOMConversion",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.UOMConversion.UpdateUOMConversionDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOMConversion.GetUOMConversionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/UOMConversion/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.UOMConversion.GetUOMConversionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.UOMConversionController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/UOMConversion/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Warehouse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Warehouse.GetWarehouseDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWarehouse"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/Warehouse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Warehouse.CreateWarehouseDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Warehouse.GetWarehouseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateWarehouse"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Warehouse",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Warehouse.UpdateWarehouseDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Warehouse.GetWarehouseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Warehouse/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Warehouse.GetWarehouseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.WarehouseController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Warehouse/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "GetAll",
+    "RelativePath": "api/v2/inv/Zone",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Inv.Application.DTOs.Zone.GetZoneDto, Inv.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetZone"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Create",
+    "RelativePath": "api/v2/inv/Zone",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "Inv.Application.DTOs.Zone.CreateZoneDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Zone.GetZoneDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "CreateZone"
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Update",
+    "RelativePath": "api/v2/inv/Zone",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateDto",
+        "Type": "Inv.Application.DTOs.Zone.UpdateZoneDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "uniquePropertyNames",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Zone.GetZoneDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Get",
+    "RelativePath": "api/v2/inv/Zone/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Inv.Application.DTOs.Zone.GetZoneDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Inv.WebAPI.Controllers.ZoneController",
+    "Method": "Delete",
+    "RelativePath": "api/v2/inv/Zone/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

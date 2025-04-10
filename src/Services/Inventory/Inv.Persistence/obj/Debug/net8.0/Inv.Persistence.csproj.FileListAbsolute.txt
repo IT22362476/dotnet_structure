@@ -1,0 +1,51 @@
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.csproj.AssemblyReference.cache
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.AssemblyInfoInputs.cache
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.AssemblyInfo.cs
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.csproj.CoreCompileInputs.cache
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.sourcelink.json
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.deps.json
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.runtimeconfig.json
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.pdb
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Application.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Domain.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Shared.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Application.pdb
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Domain.pdb
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\Inv.Shared.pdb
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Pers.63AEE132.Up2Date
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\refint\Inv.Persistence.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.pdb
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.genruntimeconfig.cache
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\obj\Debug\net8.0\ref\Inv.Persistence.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\JwtTokenAuthentication.dll
+D:\GitHub\Inventory\src\Services\Inv\Inv.Persistence\bin\Debug\net8.0\JwtTokenAuthentication.pdb
+D:\GitHub\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.dll
+D:\GitHub\NewInventory\Inv.Persistence\obj\Debug\net8.0\refint\Inv.Persistence.dll
+D:\GitHub\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.deps.json
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.runtimeconfig.json
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Persistence.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Application.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Domain.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Shared.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\JwtTokenAuthentication.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Application.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Domain.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\Inv.Shared.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\bin\Debug\net8.0\JwtTokenAuthentication.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.csproj.AssemblyReference.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.AssemblyInfoInputs.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.AssemblyInfo.cs
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.sourcelink.json
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Pers.63AEE132.Up2Date
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\refint\Inv.Persistence.dll
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.pdb
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\Inv.Persistence.genruntimeconfig.cache
+C:\Users\User\Projects\Inventory Management\GRN API\NewInventory\Inv.Persistence\obj\Debug\net8.0\ref\Inv.Persistence.dll
