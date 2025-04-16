@@ -18,6 +18,7 @@ namespace Inv.Persistence.Repositories
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+        /*
         public async Task<Result<int>> CreateGRNAsync(CreateGRNCommand request, CancellationToken cancellationToken)
         {
             // Check if the GRN Details are not null
@@ -151,6 +152,56 @@ namespace Inv.Persistence.Repositories
                 var message = ex.InnerException?.Message ?? ex.Message;
                 return Result<int>.Failure(message: ex.Message + ex.InnerException);
             }
+        }*/
+
+        public async Task<Result<int>> CreateGRNAsync(CreateGRNCommand request, CancellationToken cancellationToken)
+        {
+            using (var transaction = await _unitOfWork.BeginTransactionAsync(cancellationToken))
+            {
+                try
+                {
+                    var grnHeader = _mapper.Map<GRNHeader>(request);
+
+                    // Update last numbers
+                    // Call the UpdateLastNumber method
+                    await UpdateNumber.UpdateLastNumber(_unitOfWork, "GRNHeader", grnHeader.CompSerialID);
+                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
+
+                    // get the last number
+                    var lastNumber = await _unitOfWork.Repository<TheNumber>().Entities
+                        .Where(nu => nu.TheNumberName == "GRNHeader" && nu.ComSerialID == grnHeader.CompSerialID)
+                        .FirstOrDefaultAsync(cancellationToken);
+
+                    if (lastNumber == null)
+                    {
+                        throw new Exception("Failed to get a new GRN number.");
+                    }
+
+                    grnHeader.GRNID = lastNumber.LastNumber;
+
+                    await _unitOfWork.Repository<GRNHeader>().AddAsync(grnHeader);
+                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
+
+                    foreach (var item in request.GRNDetails)
+                    {
+                        var grnDetail = _mapper.Map<GRNDetail>(item);
+                        grnHeader.GRNDetails.Add(grnDetail);
+                    }
+
+                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
+                    await _unitOfWork.CommitAsync();
+
+                    return Result<int>.Success(grnHeader.GRNHeaderSerialID, message: "GRN created successfully");
+                }
+                catch (Exception ex)
+                {
+                    // Rollback transaction in case of an error
+                    await _unitOfWork.RollbackAsync();
+                    var message = ex.InnerException?.Message ?? ex.Message;
+                    return Result<int>.Failure(message: ex.Message + ex.InnerException);
+                }
+            }
+           
         }
     }
 }

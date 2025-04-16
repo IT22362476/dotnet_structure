@@ -53,6 +53,7 @@ namespace Inv.Persistence.Extensions
                 .AddTransient(typeof(IBinLocationRepository), typeof(BinLocationRepository))
                 .AddTransient(typeof(IItemRepository), typeof(ItemRepository))
                 .AddTransient(typeof(IGRNRepository), typeof(GRNRepository))
+                .AddTransient(typeof(ISystemPORepository), typeof(SystemPORepository))
                 .AddTransient(typeof(ISortHelper<>), typeof(SortHelper<>))
                 .AddHttpClient<IMessagingHubService, MessagingHubService>(client =>
                 {

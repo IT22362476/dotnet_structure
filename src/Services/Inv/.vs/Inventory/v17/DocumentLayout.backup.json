@@ -1,0 +1,184 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.application\\features\\grn\\commands\\creategrncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|solutionrelative:inv.application\\features\\grn\\commands\\creategrncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.persistence\\repositories\\systemporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\repositories\\systemporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.application\\features\\grn\\commands\\creategrncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|solutionrelative:inv.application\\features\\grn\\commands\\creategrncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.application\\interfaces\\repositories\\isystemporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|solutionrelative:inv.application\\interfaces\\repositories\\isystemporepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.persistence\\repositories\\grnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42286F3D-DC35-4B1F-8932-417AC0B9E13B}|Inv.Persistence\\Inv.Persistence.csproj|solutionrelative:inv.persistence\\repositories\\grnrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.application\\dtos\\grn\\getgrnheaderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|solutionrelative:inv.application\\dtos\\grn\\getgrnheaderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C632DF1C-6A58-4B13-B67E-44E5490AC2B0}|Inv.Domain\\Inv.Domain.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.domain\\entities\\grnheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C632DF1C-6A58-4B13-B67E-44E5490AC2B0}|Inv.Domain\\Inv.Domain.csproj|solutionrelative:inv.domain\\entities\\grnheader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.application\\features\\grn\\queries\\getapprovedgrnswithpaginationquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B216B28-D08F-48E1-8B4D-8233396FCC7A}|Inv.Application\\Inv.Application.csproj|solutionrelative:inv.application\\features\\grn\\queries\\getapprovedgrnswithpaginationquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C632DF1C-6A58-4B13-B67E-44E5490AC2B0}|Inv.Domain\\Inv.Domain.csproj|c:\\users\\user\\projects\\inventory management\\grn api\\newinventory\\src\\services\\inv\\inv.domain\\entities\\grndetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C632DF1C-6A58-4B13-B67E-44E5490AC2B0}|Inv.Domain\\Inv.Domain.csproj|solutionrelative:inv.domain\\entities\\grndetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ISystemPORepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Interfaces\\Repositories\\ISystemPORepository.cs",
+              "RelativeDocumentMoniker": "Inv.Application\\Interfaces\\Repositories\\ISystemPORepository.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Interfaces\\Repositories\\ISystemPORepository.cs",
+              "RelativeToolTip": "Inv.Application\\Interfaces\\Repositories\\ISystemPORepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T14:22:48.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SystemPORepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Persistence\\Repositories\\SystemPORepository.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Repositories\\SystemPORepository.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Persistence\\Repositories\\SystemPORepository.cs",
+              "RelativeToolTip": "Inv.Persistence\\Repositories\\SystemPORepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T14:22:04.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateGRNCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommandValidator.cs",
+              "RelativeDocumentMoniker": "Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommandValidator.cs",
+              "RelativeToolTip": "Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:39:01.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateGRNCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs",
+              "RelativeDocumentMoniker": "Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs*",
+              "RelativeToolTip": "Inv.Application\\Features\\GRN\\Commands\\CreateGRNCommand.cs*",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAYwHMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T05:41:49.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GRNRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Persistence\\Repositories\\GRNRepository.cs",
+              "RelativeDocumentMoniker": "Inv.Persistence\\Repositories\\GRNRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Persistence\\Repositories\\GRNRepository.cs",
+              "RelativeToolTip": "Inv.Persistence\\Repositories\\GRNRepository.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwBcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T04:35:52.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetGRNHeaderDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\DTOs\\GRN\\GetGRNHeaderDto.cs",
+              "RelativeDocumentMoniker": "Inv.Application\\DTOs\\GRN\\GetGRNHeaderDto.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\DTOs\\GRN\\GetGRNHeaderDto.cs",
+              "RelativeToolTip": "Inv.Application\\DTOs\\GRN\\GetGRNHeaderDto.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T04:12:20.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetApprovedGRNsWithPaginationQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Features\\GRN\\Queries\\GetApprovedGRNsWithPaginationQuery.cs",
+              "RelativeDocumentMoniker": "Inv.Application\\Features\\GRN\\Queries\\GetApprovedGRNsWithPaginationQuery.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Application\\Features\\GRN\\Queries\\GetApprovedGRNsWithPaginationQuery.cs",
+              "RelativeToolTip": "Inv.Application\\Features\\GRN\\Queries\\GetApprovedGRNsWithPaginationQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T17:02:09.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GRNHeader.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Domain\\Entities\\GRNHeader.cs",
+              "RelativeDocumentMoniker": "Inv.Domain\\Entities\\GRNHeader.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Domain\\Entities\\GRNHeader.cs",
+              "RelativeToolTip": "Inv.Domain\\Entities\\GRNHeader.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwCoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T10:53:26.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GRNDetail.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Domain\\Entities\\GRNDetail.cs",
+              "RelativeDocumentMoniker": "Inv.Domain\\Entities\\GRNDetail.cs",
+              "ToolTip": "C:\\Users\\User\\Projects\\Inventory Management\\GRN API\\NewInventory\\src\\Services\\Inv\\Inv.Domain\\Entities\\GRNDetail.cs",
+              "RelativeToolTip": "Inv.Domain\\Entities\\GRNDetail.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA5wBwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:01:53.836Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -21,9 +21,9 @@ namespace Inv.Application.Features.GRN.Commands
 
             // Validate GRNDetails
             RuleFor(x => x.GRNDetails)
-                .NotEmpty().WithMessage("At least on GRN Detail is required.")
-                .Must(details => details.GroupBy(d => d.LineNumber).All(g => g.Count() == 1))
-                .WithMessage("Duplicate line numbers detected.");
+                .NotEmpty().WithMessage("At least on GRN Detail is required.");
+                //.Must(details => details.GroupBy(d => d.LineNumber).All(g => g.Count() == 1))
+                //.WithMessage("Duplicate line numbers detected.");
 
             RuleForEach(x => x.GRNDetails).SetValidator(new CreateGRNDetailDtoValidator());
         }
