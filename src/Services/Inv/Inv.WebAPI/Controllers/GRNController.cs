@@ -54,6 +54,7 @@ namespace Inv.WebAPI.Controllers
         /// </summary>
         /// <returns>A list of grns.</returns>
         [HttpGet(Name = "GetGRN")]
+        [ApiExplorerSettings(IgnoreApi = true)] // Optional: hides this from Swagger
         [AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN)]
         public override async Task<ActionResult<IEnumerable<GetGRNDto>>> GetAll()
         {
@@ -61,11 +62,21 @@ namespace Inv.WebAPI.Controllers
         }
         
         /// <summary>
-        /// Retrieves approved grns.
+        /// Retrieves approved grns with pagination.
         /// </summary>
         /// <returns>A list of grns.</returns>
-        [HttpGet("paged/approved")]
+        [HttpGet("paginated/approved")]
         public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetApprovedGRNs([FromBody] GetApprovedGRNsWithPaginationQuery request, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(request, cancellationToken);
+        }
+        
+        /// <summary>
+        /// Retrieves approval pending grns with pagination.
+        /// </summary>
+        /// <returns>A list of grns.</returns>
+        [HttpGet("paginated")]
+        public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetGRNs([FromBody] GetGRNsWithPaginationQuery request, CancellationToken cancellationToken)
         {
             return await _mediator.Send(request, cancellationToken);
         }
