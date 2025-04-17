@@ -3,6 +3,7 @@ using AutoMapper;
 using Inv.Application.DTOs.GRN;
 using Inv.Application.DTOs.Item;
 using Inv.Application.Features.GRN.Commands;
+using Inv.Application.Features.GRN.Queries;
 using Inv.Domain.Entities;
 using Inv.Infrastructure.Services;
 using Inv.Persistence.Contexts;
@@ -57,6 +58,16 @@ namespace Inv.WebAPI.Controllers
         public override async Task<ActionResult<IEnumerable<GetGRNDto>>> GetAll()
         {
             return await base.GetAll();
+        }
+        
+        /// <summary>
+        /// Retrieves approved grns.
+        /// </summary>
+        /// <returns>A list of grns.</returns>
+        [HttpGet("paged/approved")]
+        public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetApprovedGRNs([FromBody] GetApprovedGRNsWithPaginationQuery request, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(request, cancellationToken);
         }
 
         /// <summary>
