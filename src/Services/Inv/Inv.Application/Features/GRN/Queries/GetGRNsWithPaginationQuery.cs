@@ -73,7 +73,7 @@ namespace Inv.Application.Features.GRN.Queries
                         LEFT JOIN [CoreDB].[Core].[User] AS usr ON usr.UserSerialID = grn.ApprovedBy
                         LEFT JOIN [CoreDB].[Core].[User] AS usrm ON usrm.UserSerialID = grn.PreparedBy
                         LEFT JOIN [INVDB].[Inv].[GRNDetail] AS detail ON detail.GRNHeaderSerialID = grn.GRNHeaderSerialID
-                        WHERE 1 = 1 AND grn.ApprovedBy IS NULL";
+                        WHERE 1 = 1 AND grn.ApprovedBy IS NULL AND grn.IsDeleted = 0";
 
             // split the search terms by comma
             if (!string.IsNullOrWhiteSpace(request.Filter))
