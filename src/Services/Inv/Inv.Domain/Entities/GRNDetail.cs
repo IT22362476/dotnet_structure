@@ -26,6 +26,9 @@ namespace Inv.Domain.Entities
         [Required]
         public int ItemSerialID { get; set; }
 
+        [ForeignKey(nameof(ItemSerialID))]
+        public virtual Item? Item { get; set; }
+
         public int SystemPOSerialID { get; set; }
 
         [Required]

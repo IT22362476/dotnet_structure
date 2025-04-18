@@ -1,8 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using AutoMapper;
+using Inv.Application.Common.Mappings;
+using Inv.Domain.Entities;
 
 namespace Inv.Application.DTOs.GRN
 {
-    public class GetGRNHeaderByIdDto
+    public class GetGRNHeaderByIdDto : IMapFrom<GRNHeader>
     {
         [Required]
         public int GRNHeaderSerialID { get; set; }
@@ -30,5 +33,14 @@ namespace Inv.Application.DTOs.GRN
 
         [Required]
         public DateTime CreatedDate { get; set; }
+
+        public List<GetGRNDetailDto> GRNDetails { get; set; } = new List<GetGRNDetailDto>();
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<GRNHeader, GetGRNHeaderByIdDto>()
+                .ForMember(dest => dest.GRNDetails, opt => opt.MapFrom(src => src.GRNDetails));
+        }
+
     }
 }

@@ -131,7 +131,7 @@ namespace Inv.Application.Features.GRN.Queries
 
             var result = await data.ToPaginatedCustomListAsync(query.PageNumber, query.PageSize, cancellationToken);
 
-            return await Result<PaginatedResult<GetPaginatedGRNHeadersDto>>.FailureAsync(result, "Loaded Successfully.");
+            return await Result<PaginatedResult<GetPaginatedGRNHeadersDto>>.SuccessAsync(result, "Loaded Successfully.");
         }
     }
 }

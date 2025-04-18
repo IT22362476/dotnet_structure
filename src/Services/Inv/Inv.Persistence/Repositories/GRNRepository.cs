@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Inv.Application.DTOs.DelRecord;
+using Inv.Application.DTOs.GRN;
 using Inv.Application.Features.GRN.Commands;
+using Inv.Application.Features.GRN.Queries;
 using Inv.Application.Interfaces.Repositories;
 using Inv.Domain.Entities;
 using Inv.Persistence.Helper;
@@ -18,6 +20,19 @@ namespace Inv.Persistence.Repositories
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+        }
+
+        public async Task<GRNHeader?> GetGRNHeaderByIDAsync (GetGRNHeaderByIDQuery query, CancellationToken cancellationToken)
+        {
+            var grnHeader = await _unitOfWork.Repository<GRNHeader>()
+                .Entities
+                .Include(gh => gh.GRNDetails)
+                    .ThenInclude(gd => gd.Item)
+                .Include(gh => gh.GRNDetails)
+                    .ThenInclude(gd => gd.UOM)
+                .FirstOrDefaultAsync(gh => gh.GRNHeaderSerialID == query.GRNHeaderSerialID, cancellationToken);
+
+            return grnHeader;
         }
 
         public async Task<Result<int>> CreateGRNAsync(CreateGRNCommand request, CancellationToken cancellationToken)

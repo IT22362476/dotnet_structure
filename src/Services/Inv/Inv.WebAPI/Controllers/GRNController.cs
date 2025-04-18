@@ -68,6 +68,7 @@ namespace Inv.WebAPI.Controllers
         /// </summary>
         /// <param name="id">The ID of the grn to retrieve.</param>
         [HttpGet("{id}")]
+        [ApiExplorerSettings(IgnoreApi = true)] // Optional: hides this from Swagger
         [AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
         public override async Task<ActionResult<GetGRNDto>> Get(int id)
         {
@@ -80,6 +81,18 @@ namespace Inv.WebAPI.Controllers
 
             var dto = _mapper.Map<GetGRNWithInfoDto>(entity);
             return Ok(dto);
+        }
+
+        /// <summary>
+        /// Retrieves an grn header by ID.
+        /// </summary>
+        /// <param name="id">The ID of the grn to retrieve.</param>
+        /// <param name="cancellationToken"> Cancellation token for async operations.</param>
+        [HttpGet("grnheader/{id}")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
+        public async Task<ActionResult<Result<GetGRNHeaderByIdDto>>> GetByID(int id, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetGRNHeaderByIDQuery(id), cancellationToken);
         }
 
         /// <summary>
@@ -204,6 +217,18 @@ namespace Inv.WebAPI.Controllers
         public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetGRNs([FromQuery] GetGRNsWithPaginationQuery request, CancellationToken cancellationToken)
         {
             return await _mediator.Send(request, cancellationToken);
+        }
+
+        /// <summary>
+        /// Retrieves an grn header by ID.
+        /// </summary>
+        /// <param name="id">The ID of the grn to retrieve.</param>
+        /// <param name="cancellationToken"> Cancellation token for async operations.</param>
+        [HttpGet("grndetail/{id}")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
+        public async Task<ActionResult<Result<GetGRNDetailByIDDto>>> GetGRNDetailByID(int id, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetGRNDetailByIDQuery(id), cancellationToken);
         }
     }
 }
