@@ -1,16 +1,10 @@
-﻿using Inv.Domain.Common;
-using Inv.Domain.Configarations;
-using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
-
-namespace Inv.Domain.Entities
+namespace Inv.Application.DTOs.GRN
 {
-    [EntityTypeConfiguration(typeof(GRNHeaderConfiguration))]
-    public class GRNHeader : BaseAuditableEntity
+    public class GetGRNHeaderDto
     {
-        [Key]
+        [Required]
         public int GRNHeaderSerialID { get; set; }
 
         [Required]
@@ -23,22 +17,19 @@ namespace Inv.Domain.Entities
         public int SupplierSerialID { get; set; }
 
         [Required]
-        [StringLength(50)]
         public string? SupplierInvoiceNumber { get; set; }
+
+        public string? SupplierName { get; set; }
 
         [Required]
         public int WHSerialID { get; set; }
 
-        [ForeignKey(nameof(WHSerialID))]
-        public virtual Warehouse? Warehouse { get; set; }
+        public string? WHName { get; set; }
 
         [Required]
         public int StoreSerialID { get; set; }
 
-        [ForeignKey(nameof(StoreSerialID))]
-        public virtual Store? Store { get; set; }
-
-        public virtual ICollection<GRNDetail> GRNDetails { get; set; } = new List<GRNDetail>();
+        public string? StoreName { get; set; }
 
         [Required]
         public bool Printed { get; set; }
@@ -50,8 +41,4 @@ namespace Inv.Domain.Entities
 
         public DateTime? ApprovedDate { get; set; }
     }
-
-
-
-
 }

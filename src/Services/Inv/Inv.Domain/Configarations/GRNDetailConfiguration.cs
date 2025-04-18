@@ -15,6 +15,22 @@ namespace Inv.Domain.Configarations
             builder.HasQueryFilter(g => !g.IsDeleted);
             //Purpose: HasFilter is for defining filtered indexes at the database level
             builder.HasIndex(g => g.IsDeleted).HasFilter("[IsDeleted] = 1");
+
+            // For join performance (foreign key)
+            builder.HasIndex(g => g.GRNHeaderSerialID);
+
+            // For item lookup in GRNs
+            builder.HasIndex(g => g.ItemSerialID);
+
+            // For PO reference validation
+            //builder.HasIndex(g => g.SystemPOSerialID);
+
+            // For batch tracking
+            builder.HasIndex(g => g.BatchNumber)
+                  .HasFilter("[BatchNumber] IS NOT NULL");
+
+            // Composite index for common query patterns
+            builder.HasIndex(g => new { g.GRNHeaderSerialID, g.ItemSerialID });
         }
     }
 }

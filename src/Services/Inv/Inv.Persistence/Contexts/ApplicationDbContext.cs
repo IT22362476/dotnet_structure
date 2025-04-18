@@ -50,7 +50,11 @@ namespace Inv.Persistence.Contexts
         public DbSet<GRNDetail> GRNDetail => Set<GRNDetail>();
         public DbSet<Invoice> Invoice => Set<Invoice>();
         public DbSet<InvoiceItem> InvoiceItem => Set<InvoiceItem>();
+        public DbSet<SystemPOHeader> SystemPOHeader => Set<SystemPOHeader>();
+        public DbSet<SystemPODetail> SystemPODetail => Set<SystemPODetail>();
+        // to be removed later
         public DbSet<PurchaseOrder> PurchaseOrder => Set<PurchaseOrder>();
+        // to be removed later
         public DbSet<PurchaseOrderItem> PurchaseOrderItem => Set<PurchaseOrderItem>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

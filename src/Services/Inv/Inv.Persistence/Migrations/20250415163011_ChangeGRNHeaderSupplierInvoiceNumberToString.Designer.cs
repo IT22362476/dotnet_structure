@@ -4,6 +4,7 @@ using Inv.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inv.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250415163011_ChangeGRNHeaderSupplierInvoiceNumberToString")]
+    partial class ChangeGRNHeaderSupplierInvoiceNumberToString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -505,19 +508,12 @@ namespace Inv.Persistence.Migrations
 
                     b.HasKey("GRNDetailSerialID");
 
-                    b.HasIndex("BatchNumber")
-                        .HasFilter("[BatchNumber] IS NOT NULL");
-
                     b.HasIndex("GRNHeaderSerialID");
 
                     b.HasIndex("IsDeleted")
                         .HasFilter("[IsDeleted] = 1");
 
-                    b.HasIndex("ItemSerialID");
-
                     b.HasIndex("UOMSerialID");
-
-                    b.HasIndex("GRNHeaderSerialID", "ItemSerialID");
 
                     b.ToTable("GRNDetail", "Inv");
                 });
@@ -582,22 +578,12 @@ namespace Inv.Persistence.Migrations
 
                     b.HasKey("GRNHeaderSerialID");
 
-                    b.HasIndex("ApprovedBy")
-                        .HasFilter("[ApprovedBy] IS NOT NULL");
-
-                    b.HasIndex("CompSerialID");
-
-                    b.HasIndex("CreatedDate");
-
                     b.HasIndex("IsDeleted")
                         .HasFilter("[IsDeleted] = 1");
 
                     b.HasIndex("StoreSerialID");
 
                     b.HasIndex("WHSerialID");
-
-                    b.HasIndex("ApprovedBy", "IsDeleted")
-                        .HasFilter("[ApprovedBy] IS NOT NULL");
 
                     b.ToTable("GRNHeader", "Inv");
                 });
