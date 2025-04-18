@@ -49,6 +49,10 @@ namespace Inv.Domain.Entities
         public int? ApprovedBy { get; set; }
 
         public DateTime? ApprovedDate { get; set; }
+        
+        public int? DeletedBy { get; set; }
+
+        public DateTime? DeletedDate { get; set; }
     }
 
 

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Inv.Application.DTOs.DelRecord;
 using Inv.Application.Features.GRN.Commands;
 using Inv.Application.Interfaces.Repositories;
 using Inv.Domain.Entities;
@@ -18,141 +19,6 @@ namespace Inv.Persistence.Repositories
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        /*
-        public async Task<Result<int>> CreateGRNAsync(CreateGRNCommand request, CancellationToken cancellationToken)
-        {
-            // Check if the GRN Details are not null
-            if (request.GRNDetails == null || request.GRNDetails.Count == 0)
-            {
-                return Result<int>.Failure("GRN Details are required.");
-            }
-
-            // check for correct bin location**
-
-
-            foreach (var grnDetail in request.GRNDetails)
-            {
-                // Check if the PO of the grn item exists
-                //var purchaseOrder = await _unitOfWork.Repository<PurchaseOrder>().GetEntityWithIncludesAsync(
-                //    po => po.POSerialID == grnDetail.SystemPOSerialID,
-                //    po => po.PurchaseOrderItem);
-
-                var purchaseOrder = await _unitOfWork.Repository<PurchaseOrder>().Entities
-                    .Include(po => po.PurchaseOrderItem)
-                    .Where(po => po.POSerialID == grnDetail.SystemPOSerialID)
-                    .FirstOrDefaultAsync();
-
-                if(purchaseOrder is null)
-                {
-                    return Result<int>.Failure($"Purchase order not found for the item {grnDetail.ItemSerialID}.");
-                }
-
-                if(purchaseOrder.PurchaseOrderItem == null || purchaseOrder.PurchaseOrderItem.Count == 0)
-                {
-                    return Result<int>.Failure($"Purchase Details not found in Purchase Order, {grnDetail.SystemPOSerialID}.");
-                }
-
-                // Check if the grn details exists in the purchase order
-                var purchaseOrderDetail = purchaseOrder.PurchaseOrderItem.FirstOrDefault(x => x.ItemSerialID == grnDetail.ItemSerialID);
-                if (purchaseOrderDetail == null)
-                {
-                    return Result<int>.Failure($"Item not found in Purchse Order Serial ID {grnDetail.SystemPOSerialID}.");
-                }
-                else
-                {
-                    // Check if the quantity is greater than the ordered quantity from PO
-                    if (grnDetail.Qty > purchaseOrderDetail.Quantity)
-                    {
-                        return Result<int>.Failure($" Quantity of item {grnDetail.ItemSerialID} exceeds available quantity.");
-                    }
-                }
-
-                // ********* BatchBalQty and AssetCount *****************
-            }
-
-            var grn = _mapper.Map<GRNHeader>(request);
-            if (grn is null)
-            {
-                return Result<int>.Failure("Failed to map the request to GRN.");
-            }
-            
-            // Add the GRN to the repository
-            try
-            {
-                // Begin transaction (it will reuse an existing one if already started)
-                using (var transaction = await _unitOfWork.BeginTransactionAsync(cancellationToken))
-                {
-                    // Update last numbers
-                    // Call the UpdateLastNumber method
-                    await UpdateNumber.UpdateLastNumber(_unitOfWork, "GRNHeader", grn.CompSerialID);
-                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
-                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
-
-                    // get the last number
-                    var lastNumber = await _unitOfWork.Repository<TheNumber>().Entities
-                        .Where(nu => nu.TheNumberName == "GRNHeader" && nu.ComSerialID == grn.CompSerialID)
-                        .FirstOrDefaultAsync(cancellationToken);
-
-                    if (lastNumber == null)
-                    {
-                        throw new Exception("Last number not found.");
-                    }
-
-                    grn.GRNID = lastNumber.LastNumber;
-
-                    await _unitOfWork.Repository<GRNHeader>().AddAsync(grn);
-                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
-
-                    // Add the GRN items to the GRN entity
-
-                    foreach (var item in request.GRNDetails)
-                    {
-                        var grnLineItem = _mapper.Map<GRNDetail>(item);
-                        grnLineItem.GRNHeaderSerialID = grn.GRNHeaderSerialID;
-                        grn.GRNDetails.Add(grnLineItem);
-                    }
-
-                    // Save the updated GRN
-                    //await _unitOfWork.Repository<GRNHeader>().UpdateAsync(grn, grn.GRNHeaderSerialID);
-                    await _unitOfWork.SaveNoCommitRoll(cancellationToken);
-
-                    // Deduct GRN quantity from the purchase order
-                    //foreach (var lineItem in request.GRNItems)
-                    //{
-                    //    var purchaseOrderLineItem = purchaseOrder.PurchaseOrderItem.FirstOrDefault(x => x.POItemSerialID == lineItem.POItemSerialID);
-                    //    if (purchaseOrderLineItem != null)
-                    //    {
-                    //        purchaseOrderLineItem.Quantity -= lineItem.ReceivedQty;
-
-                    //    }
-
-                    //}
-
-                    //Check if th purchse order is completed
-                    //if (purchaseOrder.PurchaseOrderItem.All(x => x.Quantity == 0))
-                    //{
-                    //    // Mark the purchase order as completed****************** Need status prop for PO
-                    //}
-
-                    // Save the updated purchase order
-                    //await _unitOfWork.Repository<PurchaseOrder>().UpdateAsync(purchaseOrder, purchaseOrder.POSerialID);
-                    //await _unitOfWork.SaveNoCommitRoll(cancellationToken);
-
-                    // Commit the transaction
-                    await _unitOfWork.CommitAsync();
-
-                    return Result<int>.Success(grn.GRNHeaderSerialID, message: "GRN created successfully");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                // Rollback transaction in case of an error
-                await _unitOfWork.RollbackAsync();
-                var message = ex.InnerException?.Message ?? ex.Message;
-                return Result<int>.Failure(message: ex.Message + ex.InnerException);
-            }
-        }*/
 
         public async Task<Result<int>> CreateGRNAsync(CreateGRNCommand request, CancellationToken cancellationToken)
         {
@@ -203,5 +69,108 @@ namespace Inv.Persistence.Repositories
             }
            
         }
+
+        public async Task<Result<int>> DeleteGRNAsync(DeleteGRNCommand delete, CancellationToken cancellationToken)
+        {
+            try
+            {
+                // Fetch the existing asset location by its ID
+                var existingGRNHeader = await _unitOfWork.Repository<GRNHeader>()
+                    .GetByIdAsync(delete.GRNHeaderSerialID);
+
+                if (existingGRNHeader == null)
+                {
+                    return await Result<int>.FailureAsync("Asset location not found.");
+                }
+                // Check if the asset location has already been deleted
+                if (existingGRNHeader.DeletedBy > 0)
+                {
+                    return await Result<int>.FailureAsync("Already deleted.");
+                }
+    
+                var entityWithActiveCount = await GetActiveApprovedGRNHeader(existingGRNHeader.GRNHeaderSerialID);
+                // If the current asset location is active, deactivate it
+                if (existingGRNHeader.Active )
+                {
+                    existingGRNHeader.Active = false;
+                    existingGRNHeader.IsDeleted = true;
+
+                    // Map the updated properties from the update model to the existing entity
+                    _mapper.Map(delete, existingGRNHeader);
+
+                    await _unitOfWork.Repository<GRNHeader>()
+                        .UpdateAsync(existingGRNHeader, existingGRNHeader.GRNHeaderSerialID);
+
+                    // Save the changes to the database
+                    await _unitOfWork.Save(cancellationToken);
+                }
+                // Create a new del history record for transfer
+                var createDel = new CreateDelRecordDto
+                {
+                    DocSerialID = delete.GRNHeaderSerialID,
+                    DocTable = delete.DocTable,
+                    Remarks = delete.Remarks
+
+                };
+                var create = _mapper.Map<DelRecord>(createDel);
+                await _unitOfWork.Repository<DelRecord>().AddAsync(create);
+                // Save changes again to commit the internal asset ID
+                await _unitOfWork.Save(cancellationToken);
+
+
+                return await Result<int>.SuccessAsync(data: existingGRNHeader.GRNHeaderSerialID, message: "Deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Rollback the transaction in case of an error
+                await _unitOfWork.Rollback();
+                var message = ex.InnerException?.Message ?? ex.Message;
+                return await Result<int>.FailureAsync(message: message);
+            }
+
+
+        }
+
+        private async Task<GRNHeader> GetActiveApprovedGRNHeader(int grnHeaderSerialID)
+        {
+            return await _unitOfWork.Repository<GRNHeader>().Entities
+                .Where(b => b.GRNHeaderSerialID == grnHeaderSerialID && !b.IsDeleted && b.ApprovedDate != null)
+                .OrderByDescending(x => x.ApprovedDate)
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<Result<int>> ApproveGRNHeaderAsync(ApproveGRNCommand approve, CancellationToken cancellationToken)
+        {
+            try
+            {
+                // Fetch the existing exassetlocation
+                var existingGRNHeader = await _unitOfWork.Repository<GRNHeader>()
+                    .GetByIdAsync(approve.GRNHeaderSerialID);
+
+                if (existingGRNHeader == null)
+                {
+                    return await Result<int>.FailureAsync("Asset location not found.");
+                }
+                if (existingGRNHeader.ApprovedBy > 0)
+                {
+                    return await Result<int>.FailureAsync("Already approved.");
+                }
+                // Map updated properties to the existing external asset location
+                existingGRNHeader.Active = true; // active the existing external asset location for the new location,update rental asset register ExAssetLocSerialID
+                _mapper.Map(approve, existingGRNHeader);
+                await _unitOfWork.Repository<GRNHeader>().UpdateAsync(existingGRNHeader, existingGRNHeader.GRNHeaderSerialID);
+                await _unitOfWork.Save(cancellationToken);
+
+                return await Result<int>.SuccessAsync(data: existingGRNHeader.GRNHeaderSerialID, message: "Approved successfully.");
+            }
+            catch (Exception ex)
+            {
+                // Rollback transaction in case of an error
+                await _unitOfWork.Rollback();
+                var message = ex.InnerException?.Message ?? ex.Message;
+                return await Result<int>.FailureAsync(message: ex.Message + ex.InnerException);
+            }
+        }
+
     }
 }

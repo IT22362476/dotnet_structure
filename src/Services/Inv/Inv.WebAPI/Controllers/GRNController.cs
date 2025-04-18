@@ -61,25 +61,7 @@ namespace Inv.WebAPI.Controllers
             return await base.GetAll();
         }
         
-        /// <summary>
-        /// Retrieves approved grns with pagination.
-        /// </summary>
-        /// <returns>A list of grns.</returns>
-        [HttpGet("paginated/approved")]
-        public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetApprovedGRNs([FromBody] GetApprovedGRNsWithPaginationQuery request, CancellationToken cancellationToken)
-        {
-            return await _mediator.Send(request, cancellationToken);
-        }
         
-        /// <summary>
-        /// Retrieves approval pending grns with pagination.
-        /// </summary>
-        /// <returns>A list of grns.</returns>
-        [HttpGet("paginated")]
-        public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetGRNs([FromBody] GetGRNsWithPaginationQuery request, CancellationToken cancellationToken)
-        {
-            return await _mediator.Send(request, cancellationToken);
-        }
 
         /// <summary>
         /// Retrieves an grn by ID.
@@ -170,5 +152,58 @@ namespace Inv.WebAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Example of a custom action that demonstrates using the injected dependencies.
+        /// </summary>
+        /// <param name="delete">The command to register an internal asset.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>A result indicating success or failure.</returns>
+        [HttpPatch("delete")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_AssetOwnershipApproval)]
+        public async Task<ActionResult<Result<int>>> SoftDelete([FromBody] DeleteGRNCommand delete, CancellationToken cancellationToken)
+        {
+            // Use the mediator to send the command (you may need to adjust this based on your actual command structure)
+            return await _mediator.Send(delete, cancellationToken);
+
+            // Return the result
+        }
+
+        /// <summary>
+        /// Example of a custom action that demonstrates using the injected dependencies.
+        /// </summary>
+        /// <param name="command">The command to approve an rental asset.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>A result indicating success or failure.</returns>
+        [HttpPatch("approve")]
+        [AuthorizeMultiplePermissions(Permissions.Btn_AssetMovementRentalApproval)]
+        public async Task<ActionResult<Result<int>>> Approve([FromBody] ApproveGRNCommand command, CancellationToken cancellationToken)
+        {
+            // Use the mediator to send the command (you may need to adjust this based on your actual command structure)
+            return await _mediator.Send(command, cancellationToken);
+
+            // Return the result
+        }
+
+
+
+        /// <summary>
+        /// Retrieves approved grns with pagination.
+        /// </summary>
+        /// <returns>A list of grns.</returns>
+        [HttpGet("approved/paged")]
+        public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetApprovedGRNs([FromQuery] GetApprovedGRNsWithPaginationQuery request, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(request, cancellationToken);
+        }
+
+        /// <summary>
+        /// Retrieves approval pending grns with pagination.
+        /// </summary>
+        /// <returns>A list of grns.</returns>
+        [HttpGet("paged")]
+        public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetGRNs([FromQuery] GetGRNsWithPaginationQuery request, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(request, cancellationToken);
+        }
     }
 }
