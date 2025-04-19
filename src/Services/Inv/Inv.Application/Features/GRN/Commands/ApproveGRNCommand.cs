@@ -23,19 +23,17 @@ namespace Inv.Application.Features.GRN.Commands
     }
     internal class ApproveGRNCommandHandler : IRequestHandler<ApproveGRNCommand, Result<int>>
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
+        
         private readonly IGRNRepository _gRNRepository;
 
-        public ApproveGRNCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IGRNRepository grnRepository)
+        public ApproveGRNCommandHandler(IGRNRepository grnRepository)
         {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
             _gRNRepository = grnRepository;
         }
 
         public async Task<Result<int>> Handle(ApproveGRNCommand query, CancellationToken cancellationToken)
         {
+            // Valiadte the query using FluentValidation
             ApproveGRNCommandValidator validator = new ApproveGRNCommandValidator();
             var validationResult = await validator.ValidateAsync(query, cancellationToken);
             if (!validationResult.IsValid)
@@ -43,7 +41,7 @@ namespace Inv.Application.Features.GRN.Commands
                 var errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
                 return await Result<int>.FailureAsync(errors);
             }
-            // Step 1: Retrieve the brand along with brand item types
+            
             return await _gRNRepository.ApproveGRNHeaderAsync(query, cancellationToken);
         }
     }

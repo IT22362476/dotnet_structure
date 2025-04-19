@@ -30,19 +30,17 @@ namespace Inv.Application.Features.GRN.Commands
     }
     internal class DeleteGRNCommandHandler : IRequestHandler<DeleteGRNCommand, Result<int>>
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
         private readonly IGRNRepository _gRNRepository;
 
-        public DeleteGRNCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IGRNRepository grnRepository)
+        public DeleteGRNCommandHandler(IGRNRepository grnRepository)
         {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
+            
             _gRNRepository = grnRepository;
         }
 
         public async Task<Result<int>> Handle(DeleteGRNCommand query, CancellationToken cancellationToken)
         {
+            // Validate query using FluentValidation
             DeleteGRNCommandValidator validator = new DeleteGRNCommandValidator();
             var validationResult = await validator.ValidateAsync(query, cancellationToken);
             if (!validationResult.IsValid)
@@ -50,7 +48,7 @@ namespace Inv.Application.Features.GRN.Commands
                 var errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
                 return await Result<int>.FailureAsync(errors);
             }
-            // Step 1: Retrieve the brand along with brand item types
+            
             return await _gRNRepository.DeleteGRNAsync(query, cancellationToken);
         }
     }

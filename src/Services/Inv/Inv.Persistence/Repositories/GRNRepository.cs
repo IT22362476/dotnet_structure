@@ -89,22 +89,22 @@ namespace Inv.Persistence.Repositories
         {
             try
             {
-                // Fetch the existing asset location by its ID
+                // Fetch the existing grn header by its ID
                 var existingGRNHeader = await _unitOfWork.Repository<GRNHeader>()
                     .GetByIdAsync(delete.GRNHeaderSerialID);
 
                 if (existingGRNHeader == null)
                 {
-                    return await Result<int>.FailureAsync("Asset location not found.");
+                    return await Result<int>.FailureAsync("GRN Header not found.");
                 }
-                // Check if the asset location has already been deleted
+                // Check if the existing grn has already been deleted
                 if (existingGRNHeader.DeletedBy > 0)
                 {
                     return await Result<int>.FailureAsync("Already deleted.");
                 }
     
                 var entityWithActiveCount = await GetActiveApprovedGRNHeader(existingGRNHeader.GRNHeaderSerialID);
-                // If the current asset location is active, deactivate it
+                // If the existing grn header is active, deactivate it
                 if (existingGRNHeader.Active )
                 {
                     existingGRNHeader.Active = false;
@@ -119,7 +119,7 @@ namespace Inv.Persistence.Repositories
                     // Save the changes to the database
                     await _unitOfWork.Save(cancellationToken);
                 }
-                // Create a new del history record for transfer
+                // Create a new del history record for the grn
                 var createDel = new CreateDelRecordDto
                 {
                     DocSerialID = delete.GRNHeaderSerialID,
@@ -146,10 +146,10 @@ namespace Inv.Persistence.Repositories
 
         }
 
-        private async Task<GRNHeader> GetActiveApprovedGRNHeader(int grnHeaderSerialID)
+        private async Task<GRNHeader?> GetActiveApprovedGRNHeader(int grnHeaderSerialID)
         {
             return await _unitOfWork.Repository<GRNHeader>().Entities
-                .Where(b => b.GRNHeaderSerialID == grnHeaderSerialID && !b.IsDeleted && b.ApprovedDate != null)
+                .Where(g => g.GRNHeaderSerialID == grnHeaderSerialID && !g.IsDeleted && g.ApprovedDate != null)
                 .OrderByDescending(x => x.ApprovedDate)
                 .FirstOrDefaultAsync();
         }
@@ -158,13 +158,13 @@ namespace Inv.Persistence.Repositories
         {
             try
             {
-                // Fetch the existing exassetlocation
+                // Fetch the existing grnheader by its id
                 var existingGRNHeader = await _unitOfWork.Repository<GRNHeader>()
                     .GetByIdAsync(approve.GRNHeaderSerialID);
 
                 if (existingGRNHeader == null)
                 {
-                    return await Result<int>.FailureAsync("Asset location not found.");
+                    return await Result<int>.FailureAsync("GRN Header not found.");
                 }
                 if (existingGRNHeader.ApprovedBy > 0)
                 {
