@@ -2,8 +2,10 @@
 using AutoMapper;
 using Inv.Application.DTOs.GRN;
 using Inv.Application.DTOs.Item;
+using Inv.Application.DTOs.SystemPO;
 using Inv.Application.Features.GRN.Commands;
 using Inv.Application.Features.GRN.Queries;
+using Inv.Application.Features.SystemPO.Queries;
 using Inv.Domain.Entities;
 using Inv.Infrastructure.Services;
 using Inv.Persistence.Contexts;
@@ -229,6 +231,18 @@ namespace Inv.WebAPI.Controllers
         public async Task<ActionResult<Result<GetGRNDetailByIDDto>>> GetGRNDetailByID(int id, CancellationToken cancellationToken)
         {
             return await _mediator.Send(new GetGRNDetailByIDQuery(id), cancellationToken);
+        }
+
+        /// <summary>
+        /// Retrieves open POs for a item.
+        /// </summary>
+        /// <param name="id">The ID of the grn to retrieve.</param>
+        /// <param name="cancellationToken"> Cancellation token for async operations.</param>
+        [HttpGet("po/item/{id}")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
+        public async Task<ActionResult<Result<List<GetSystemPOByItemDto>>>> GetPOsByItemSerialID(int id, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetOpenPOsByItemQuery(id), cancellationToken);
         }
     }
 }
