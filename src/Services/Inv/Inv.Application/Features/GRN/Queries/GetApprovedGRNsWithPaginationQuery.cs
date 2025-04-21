@@ -104,8 +104,12 @@ namespace Inv.Application.Features.GRN.Queries
                                     columnName = "grn.IsDeleted";
                                     break;
 
-                                case "[CompSerialID]":
-                                    columnName = "grn.CompSerialID";
+                                case "[CompName]":
+                                    columnName = "comp.CompanyName";
+                                    break;
+
+                                case "[SupplierName]":
+                                    columnName = "supplier.SupplierName";
                                     break;
                             }
                         }
