@@ -100,6 +100,10 @@ namespace Inv.Application.Features.GRN.Queries
                                     columnName = "grn.Active";
                                     break;
 
+                                case "[IsDeleted]":
+                                    columnName = "grn.IsDeleted";
+                                    break;
+
                                 case "[CompSerialID]":
                                     columnName = "grn.CompSerialID";
                                     break;
@@ -131,7 +135,7 @@ namespace Inv.Application.Features.GRN.Queries
 
             var result = await data.ToPaginatedCustomListAsync(query.PageNumber, query.PageSize, cancellationToken);
 
-            return await Result<PaginatedResult<GetPaginatedGRNHeadersDto>>.FailureAsync(result, "Loaded Successfully.");
+            return await Result<PaginatedResult<GetPaginatedGRNHeadersDto>>.SuccessAsync(result, "Loaded Successfully.");
         }
     }
 }

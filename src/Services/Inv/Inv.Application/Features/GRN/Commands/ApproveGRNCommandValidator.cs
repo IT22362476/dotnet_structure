@@ -7,7 +7,7 @@ using FluentValidation;
 
 namespace Inv.Application.Features.GRN.Commands
 {
-    public class ApproveGRNCommandValidator : AbstractValidator<ApproveGRNCommand>
+    public class ApproveGRNCommandValidator : AbstractValidator<ApproveGRNDetailCommand>
     {
         public ApproveGRNCommandValidator()
         {

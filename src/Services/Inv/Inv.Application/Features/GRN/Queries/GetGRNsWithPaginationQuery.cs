@@ -13,6 +13,14 @@ namespace Inv.Application.Features.GRN.Queries
 {
     public class GetGRNsWithPaginationQuery : IRequest<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>
     {
+        public Boolean status { get; set; }
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
+        public string? Filter { get; set; }
+        public string? SortColumn { get; set; } // Column to sort by
+        public string? SortDirection { get; set; } // Sort direction: ASC or DESC
+        public int? CompSerialID { get; set; }
+
         public GetGRNsWithPaginationQuery()
         {
         }
@@ -22,14 +30,7 @@ namespace Inv.Application.Features.GRN.Queries
             PageNumber = pageNumber;
             PageSize = pageSize;
         }
-
-        public Boolean status { get; set; }
-        public int PageNumber { get; set; }
-        public int PageSize { get; set; }
-        public string? Filter { get; set; }
-        public string? SortColumn { get; set; } // Column to sort by
-        public string? SortDirection { get; set; } // Sort direction: ASC or DESC
-        public int? CompSerialID { get; set; }
+        
     }
 
     public class GetGRNsWithPaginationQueryHandler : IRequestHandler<GetGRNsWithPaginationQuery, Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>
@@ -99,6 +100,10 @@ namespace Inv.Application.Features.GRN.Queries
                                 case "[Active]":
                                     columnName = "grn.Active";
                                     break;
+                                
+                                case "[IsDeleted]":
+                                    columnName = "grn.IsDeleted";
+                                    break;
 
                                 case "[CompSerialID]":
                                     columnName = "grn.CompSerialID";
@@ -131,7 +136,7 @@ namespace Inv.Application.Features.GRN.Queries
 
             var result = await data.ToPaginatedCustomListAsync(query.PageNumber, query.PageSize, cancellationToken);
 
-            return await Result<PaginatedResult<GetPaginatedGRNHeadersDto>>.FailureAsync(result, "Loaded Successfully.");
+            return await Result<PaginatedResult<GetPaginatedGRNHeadersDto>>.SuccessAsync(result, "Loaded Successfully.");
         }
 
     }

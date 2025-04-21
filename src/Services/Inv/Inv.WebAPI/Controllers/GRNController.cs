@@ -2,8 +2,10 @@
 using AutoMapper;
 using Inv.Application.DTOs.GRN;
 using Inv.Application.DTOs.Item;
+using Inv.Application.DTOs.SystemPO;
 using Inv.Application.Features.GRN.Commands;
 using Inv.Application.Features.GRN.Queries;
+using Inv.Application.Features.SystemPO.Queries;
 using Inv.Domain.Entities;
 using Inv.Infrastructure.Services;
 using Inv.Persistence.Contexts;
@@ -68,6 +70,7 @@ namespace Inv.WebAPI.Controllers
         /// </summary>
         /// <param name="id">The ID of the grn to retrieve.</param>
         [HttpGet("{id}")]
+        [ApiExplorerSettings(IgnoreApi = true)] // Optional: hides this from Swagger
         [AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
         public override async Task<ActionResult<GetGRNDto>> Get(int id)
         {
@@ -80,6 +83,18 @@ namespace Inv.WebAPI.Controllers
 
             var dto = _mapper.Map<GetGRNWithInfoDto>(entity);
             return Ok(dto);
+        }
+
+        /// <summary>
+        /// Retrieves an grn header by ID.
+        /// </summary>
+        /// <param name="id">The ID of the grn to retrieve.</param>
+        /// <param name="cancellationToken"> Cancellation token for async operations.</param>
+        [HttpGet("grnheader/{id}")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
+        public async Task<ActionResult<Result<GetGRNHeaderByIdDto>>> GetByID(int id, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetGRNHeaderByIDQuery(id), cancellationToken);
         }
 
         /// <summary>
@@ -135,6 +150,7 @@ namespace Inv.WebAPI.Controllers
         /// <param name="updateDto">The DTO representing the grn updates.</param>
         /// <param name="uniquePropertyNames">Optional: Array of property names to check for uniqueness.</param>
         [HttpPut]
+        [ApiExplorerSettings(IgnoreApi = true)]
         [AuthorizeMultiplePermissions(Permissions.Btn_SetEditGRN)]
         public override async Task<ActionResult<GetGRNDto>> Update([FromBody] UpdateGRNDto updateDto, [FromQuery] string[]? uniquePropertyNames = null)
         {
@@ -145,6 +161,7 @@ namespace Inv.WebAPI.Controllers
         /// </summary>
         /// <param name="id">The ID of the grn to delete.</param>
         [HttpDelete("{id}")]
+        [ApiExplorerSettings(IgnoreApi = true)]
         [AuthorizeMultiplePermissions(Permissions.Btn_SetDeleteGRN)]
         public override async Task<IActionResult> Delete(int id)
         {
@@ -153,9 +170,9 @@ namespace Inv.WebAPI.Controllers
 
 
         /// <summary>
-        /// Example of a custom action that demonstrates using the injected dependencies.
+        /// Deletes a grn header.
         /// </summary>
-        /// <param name="delete">The command to register an internal asset.</param>
+        /// <param name="delete">The command to delete a GRN.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>A result indicating success or failure.</returns>
         [HttpPatch("delete")]
@@ -167,21 +184,32 @@ namespace Inv.WebAPI.Controllers
 
             // Return the result
         }
+        
+        /// <summary>
+        /// Deletes a grn detail.
+        /// </summary>
+        /// <param name="id">GRN Detail Serial ID.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>A result indicating success or failure.</returns>
+        [HttpPatch("grndetail/delete/{id}")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_AssetOwnershipApproval)]
+        public async Task<ActionResult<Result<int>>> SoftDeleteGRNDetail(int id, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new DeleteGRNDetailCommand(id), cancellationToken);
+        }
 
         /// <summary>
-        /// Example of a custom action that demonstrates using the injected dependencies.
+        /// Aprroves a grn.
         /// </summary>
         /// <param name="command">The command to approve an rental asset.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>A result indicating success or failure.</returns>
         [HttpPatch("approve")]
-        [AuthorizeMultiplePermissions(Permissions.Btn_AssetMovementRentalApproval)]
-        public async Task<ActionResult<Result<int>>> Approve([FromBody] ApproveGRNCommand command, CancellationToken cancellationToken)
+        //[AuthorizeMultiplePermissions(Permissions.Btn_AssetMovementRentalApproval)]
+        public async Task<ActionResult<Result<int>>> Approve([FromBody] ApproveGRNDetailCommand command, CancellationToken cancellationToken)
         {
             // Use the mediator to send the command (you may need to adjust this based on your actual command structure)
             return await _mediator.Send(command, cancellationToken);
-
-            // Return the result
         }
 
 
@@ -204,6 +232,30 @@ namespace Inv.WebAPI.Controllers
         public async Task<ActionResult<Result<PaginatedResult<GetPaginatedGRNHeadersDto>>>> GetGRNs([FromQuery] GetGRNsWithPaginationQuery request, CancellationToken cancellationToken)
         {
             return await _mediator.Send(request, cancellationToken);
+        }
+
+        /// <summary>
+        /// Retrieves an grn header by ID.
+        /// </summary>
+        /// <param name="id">The ID of the grn to retrieve.</param>
+        /// <param name="cancellationToken"> Cancellation token for async operations.</param>
+        [HttpGet("grndetail/{id}")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
+        public async Task<ActionResult<Result<GetGRNDetailByIDDto>>> GetGRNDetailByID(int id, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetGRNDetailByIDQuery(id), cancellationToken);
+        }
+
+        /// <summary>
+        /// Retrieves open POs for a item.
+        /// </summary>
+        /// <param name="id">The ID of the grn to retrieve.</param>
+        /// <param name="cancellationToken"> Cancellation token for async operations.</param>
+        [HttpGet("po/item/{id}")]
+        //[AuthorizeMultiplePermissions(Permissions.Btn_SetViewGRN, Permissions.Btn_SetViewGRN)]
+        public async Task<ActionResult<Result<List<GetSystemPOByItemDto>>>> GetPOsByItemSerialID(int id, CancellationToken cancellationToken)
+        {
+            return await _mediator.Send(new GetOpenPOsByItemQuery(id), cancellationToken);
         }
     }
 }

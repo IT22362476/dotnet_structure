@@ -56,6 +56,7 @@ namespace Inv.Persistence.Contexts
         public DbSet<PurchaseOrder> PurchaseOrder => Set<PurchaseOrder>();
         // to be removed later
         public DbSet<PurchaseOrderItem> PurchaseOrderItem => Set<PurchaseOrderItem>();
+        public DbSet<DelRecord> DelRecord => Set<DelRecord>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -89,6 +90,7 @@ namespace Inv.Persistence.Contexts
             modelBuilder.HasSequence<int>("POItemID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("InvoiceItemID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.HasSequence<int>("TheNumberID", schema: "dbo").StartsAt(1).IncrementsBy(1);
+            modelBuilder.HasSequence<int>("DelRecID", schema: "dbo").StartsAt(1).IncrementsBy(1);
             modelBuilder.ApplyConfigurationsFromAssembly(System.Reflection.Assembly.GetExecutingAssembly());
         }
 

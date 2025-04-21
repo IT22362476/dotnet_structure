@@ -4,6 +4,7 @@ using Inv.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inv.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250418145833_AddGRNHeaderTableModification")]
+    partial class AddGRNHeaderTableModification
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,8 +35,6 @@ namespace Inv.Persistence.Migrations
             modelBuilder.HasSequence<int>("CompatibleItemlID", "dbo");
 
             modelBuilder.HasSequence<int>("CusPriceCatID", "dbo");
-
-            modelBuilder.HasSequence<int>("DelRecID", "dbo");
 
             modelBuilder.HasSequence<int>("GRNID", "dbo");
 
@@ -367,60 +368,6 @@ namespace Inv.Persistence.Migrations
                         .HasFilter("[IsDeleted] = 1");
 
                     b.ToTable("CusPriceCategory", "Inv");
-                });
-
-            modelBuilder.Entity("Inv.Domain.Entities.DelRecord", b =>
-                {
-                    b.Property<int>("DelRecSerialID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DelRecSerialID"));
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DelRecID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValueSql("NEXT VALUE FOR dbo.DelRecID");
-
-                    b.Property<int?>("DocSerialID")
-                        .IsRequired()
-                        .HasColumnType("int");
-
-                    b.Property<string>("DocTable")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("ModifiedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Remarks")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("DelRecSerialID");
-
-                    b.HasIndex("DelRecID")
-                        .IsUnique();
-
-                    b.HasIndex("IsDeleted")
-                        .HasFilter("[IsDeleted] = 1");
-
-                    b.ToTable("DelRecord", "Inv");
                 });
 
             modelBuilder.Entity("Inv.Domain.Entities.GRN", b =>
