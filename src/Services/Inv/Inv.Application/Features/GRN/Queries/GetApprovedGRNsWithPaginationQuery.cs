@@ -100,6 +100,10 @@ namespace Inv.Application.Features.GRN.Queries
                                     columnName = "grn.Active";
                                     break;
 
+                                case "[IsDeleted]":
+                                    columnName = "grn.IsDeleted";
+                                    break;
+
                                 case "[CompSerialID]":
                                     columnName = "grn.CompSerialID";
                                     break;
