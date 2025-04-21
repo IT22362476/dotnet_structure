@@ -43,11 +43,11 @@ namespace Inv.Application.Features.GRN.Commands
         private readonly ISystemPORepository _systemPORepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public CreateGRNCommandHandler(IGRNRepository grnRepository, IUnitOfWork unnitOfWork, ISystemPORepository systemPORepository)
+        public CreateGRNCommandHandler(IGRNRepository grnRepository, ISystemPORepository systemPORepository, IUnitOfWork unitOfWork)
         {
             _grnRepository = grnRepository;
-            _unitOfWork = unnitOfWork;
             _systemPORepository = systemPORepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<Result<int>> Handle(CreateGRNCommand request, CancellationToken cancellationToken)
@@ -66,6 +66,11 @@ namespace Inv.Application.Features.GRN.Commands
             {
                 return Result<int>.Failure("GRN Details are required.");
             }
+
+            // Group grn items by PO and item to calculate sums
+            var grnItemsGrouped = request.GRNDetails
+                .GroupBy(x => (x.SystemPOSerialID, x.ItemSerialID))
+                .ToDictionary(g => g.Key, g => g.Sum(x => x.Qty)); // Total qty for all conditions
 
             // collect all po numbers in grn details
             var poNumbers = request.GRNDetails
@@ -90,7 +95,7 @@ namespace Inv.Application.Features.GRN.Commands
                 // check if the po number exists
                 if (!poHeaderLookup.ContainsKey(grnItem.SystemPOSerialID))
                 {
-                    grnValidationErrors.Add($"PO Number {grnItem.SystemPOSerialID} not found.");
+                    grnValidationErrors.Add($"PO not found.");
                     continue;
                 }
 
@@ -98,14 +103,25 @@ namespace Inv.Application.Features.GRN.Commands
                 var key = (grnItem.SystemPOSerialID, grnItem.ItemSerialID);
                 if(!poDetailsLookup.TryGetValue(key, out var poDetail))
                 {
-                    grnValidationErrors.Add($"Item {grnItem.ItemSerialID} not found in PO {grnItem.SystemPOSerialID}");
+                    var po = poHeaderLookup[grnItem.SystemPOSerialID];
+                    grnValidationErrors.Add($"Item not found in PO ({po.SystemPOID})");
                     continue;
                 }
 
                 // quantity validation
                 if(grnItem.Qty > poDetail.BalToReceive)
                 {
-                    grnValidationErrors.Add($"Item {grnItem.ItemSerialID} quantity {grnItem.Qty} exceeds the balance to receive quantity in PO {grnItem.SystemPOSerialID}.");
+                    var po = poHeaderLookup[grnItem.SystemPOSerialID];
+                    grnValidationErrors.Add($"Item quantity ({grnItem.Qty}) exceeds the balance to receive quantity in PO ({po.SystemPOID}).");
+                    continue;
+                }
+
+                // Check total for PO + item combination
+                var totalPossibleQty = grnItemsGrouped[(grnItem.SystemPOSerialID, grnItem.ItemSerialID)];
+                if(totalPossibleQty > poDetail.BalToReceive)
+                {
+                    var po = poHeaderLookup[grnItem.SystemPOSerialID];
+                    grnValidationErrors.Add($"Total quantity for item exceeds the balance to receive quantity of th PO ({po.SystemPOID}).");
                     continue;
                 }
             }
