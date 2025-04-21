@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Inv.Application.Features.GRN.Commands
 {
-   public class ApproveGRNCommand : IRequest<Result<int>>, IMapFrom<Inv.Domain.Entities.GRNHeader>
+   public class ApproveGRNDetailCommand : IRequest<Result<int>>, IMapFrom<Inv.Domain.Entities.GRNHeader>
     {
         [Required]
         public int GRNHeaderSerialID { get; set; }
@@ -15,13 +15,13 @@ namespace Inv.Application.Features.GRN.Commands
         public int? ApprovedBy { get; set; }
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<ApproveGRNCommand, Inv.Domain.Entities.GRNHeader>()
+            profile.CreateMap<ApproveGRNDetailCommand, Inv.Domain.Entities.GRNHeader>()
                 .ForMember(dest => dest.ApprovedDate, opt => opt.MapFrom(src => DateTime.Now))
                 .ForMember(dest => dest.ApprovedBy, opt => opt.MapFrom(src => src.ApprovedBy));
 
         }
     }
-    internal class ApproveGRNCommandHandler : IRequestHandler<ApproveGRNCommand, Result<int>>
+    internal class ApproveGRNCommandHandler : IRequestHandler<ApproveGRNDetailCommand, Result<int>>
     {
         
         private readonly IGRNRepository _gRNRepository;
@@ -31,7 +31,7 @@ namespace Inv.Application.Features.GRN.Commands
             _gRNRepository = grnRepository;
         }
 
-        public async Task<Result<int>> Handle(ApproveGRNCommand query, CancellationToken cancellationToken)
+        public async Task<Result<int>> Handle(ApproveGRNDetailCommand query, CancellationToken cancellationToken)
         {
             // Valiadte the query using FluentValidation
             ApproveGRNCommandValidator validator = new ApproveGRNCommandValidator();
