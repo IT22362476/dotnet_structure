@@ -1,5 +1,4 @@
-﻿using Inv.Domain.Common.interfaces;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Linq.Expressions;
 
 namespace Inv.Application.Interfaces.Repositories

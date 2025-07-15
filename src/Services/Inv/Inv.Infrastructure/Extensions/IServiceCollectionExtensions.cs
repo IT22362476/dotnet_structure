@@ -1,8 +1,4 @@
-﻿
-using Inv.Domain.Common;
-using Inv.Domain.Common.interfaces;
-using Inv.Infrastructure.Services;
-using MediatR;
+﻿using MediatR;
 
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,8 +15,6 @@ namespace Inv.Infrastructure.Extensions
         {
             services
                 .AddTransient<IMediator, Mediator>()
-                .AddTransient<IDomainEventDispatcher, DomainEventDispatcher>()
-                .AddScoped<TheNumbersService>()
                 // define other services here .AddTransient<IDateTimeService, DateTimeService>()
                 .AddHttpContextAccessor();
         }

@@ -1,5 +1,4 @@
 ﻿using Inv.Application.Interfaces.Repositories;
-using Inv.Domain.Common;
 using Inv.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -20,7 +19,7 @@ namespace Inv.Persistence.Repositories
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public IGenericRepository<T> Repository<T>() where T : BaseAuditableEntity
+        public IGenericRepository<T> Repository<T>() where T : class
         {
             if (_repositories == null)
                 _repositories = new Hashtable();

@@ -1,5 +1,4 @@
 ﻿using Inv.Application.Interfaces.Repositories;
-using Inv.Domain.Common;
 using Inv.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
@@ -7,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace Inv.Persistence.Repositories
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : BaseAuditableEntity
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly ApplicationDbContext _dbContext;
 

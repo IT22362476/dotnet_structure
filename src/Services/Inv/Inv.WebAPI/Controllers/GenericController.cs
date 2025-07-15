@@ -2,8 +2,6 @@
 using Asp.Versioning;
 using AutoMapper;
 using Inv.Application.Interfaces.Repositories;
-using Inv.Domain.Entities;
-using Inv.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,7 +26,6 @@ namespace Inv.WebAPI.Controllers
     {
         private readonly TContext _context;
         private readonly IMapper _mapper;
-        private readonly TheNumbersService _theNumbersService;
         private static readonly string[] PrimaryKeyNames =
         {
             "SerialID", "UOMSerialID", "UOMConvSerialID", "SubCategorySerialID",
@@ -44,11 +41,10 @@ namespace Inv.WebAPI.Controllers
         /// </summary>
         /// <param name="context">The database context.</param>
         /// <param name="mapper">The AutoMapper instance for mapping between entities and DTOs.</param>
-        public GenericController(TContext context, IMapper mapper, TheNumbersService theNumbersService)
+        public GenericController(TContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
-            _theNumbersService = theNumbersService;
         }
 
         #region CRUD Operations
@@ -72,31 +68,31 @@ namespace Inv.WebAPI.Controllers
         }
 
    
-        [HttpPost]
-        public virtual async Task<ActionResult<TGetDto>> Create([FromBody] TCreateDto createDto, [FromQuery] string[]? uniquePropertyNames = null)
-        {
-            var entity = _mapper.Map<TEntity>(createDto);
+        // [HttpPost]
+        // public virtual async Task<ActionResult<TGetDto>> Create([FromBody] TCreateDto createDto, [FromQuery] string[]? uniquePropertyNames = null)
+        // {
+        //     var entity = _mapper.Map<TEntity>(createDto);
 
-            if (uniquePropertyNames?.Length > 0 && await CheckDuplicatesAsync(createDto, uniquePropertyNames))
-            {
-                return Conflict(new { message = $"A record already exists." });
-            }
+        //     if (uniquePropertyNames?.Length > 0 && await CheckDuplicatesAsync(createDto, uniquePropertyNames))
+        //     {
+        //         return Conflict(new { message = $"A record already exists." });
+        //     }
 
-            // Fetch and increment LastNumber for the entity name
-            var lastNumber = await _theNumbersService.GetAndIncrementLastNumberAsync(typeof(TEntity).Name);
-            Console.WriteLine($"Generated LastNumber for {typeof(TEntity).Name}: {lastNumber}");
+        //     // Fetch and increment LastNumber for the entity name
+        //     var lastNumber = await _theNumbersService.GetAndIncrementLastNumberAsync(typeof(TEntity).Name);
+        //     Console.WriteLine($"Generated LastNumber for {typeof(TEntity).Name}: {lastNumber}");
                  
-            _context.Set<TEntity>().Add(entity);
-            await _context.SaveChangesAsync();
+        //     _context.Set<TEntity>().Add(entity);
+        //     await _context.SaveChangesAsync();
 
-            var dto = _mapper.Map<TGetDto>(entity);
-            var primaryKeyValue = GetPrimaryKeyValue(entity);
+        //     var dto = _mapper.Map<TGetDto>(entity);
+        //     var primaryKeyValue = GetPrimaryKeyValue(entity);
 
-            if (primaryKeyValue == null)
-                throw new InvalidOperationException("No primary key property found for the entity.");
+        //     if (primaryKeyValue == null)
+        //         throw new InvalidOperationException("No primary key property found for the entity.");
 
-            return CreatedAtAction(nameof(Get), new { id = primaryKeyValue }, dto);
-        }
+        //     return CreatedAtAction(nameof(Get), new { id = primaryKeyValue }, dto);
+        // }
 
         [HttpPut]
         public virtual async Task<ActionResult<TGetDto>> Update([FromBody] TUpdateDto updateDto, [FromQuery] string[]? uniquePropertyNames = null)

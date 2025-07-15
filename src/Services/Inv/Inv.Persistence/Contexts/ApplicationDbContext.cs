@@ -1,9 +1,4 @@
-﻿
-using Inv.Domain.Entities;
-using Inv.Domain.Common;
-using Inv.Domain.Common.interfaces;
-using Inv.Persistence.Audit;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 
@@ -13,50 +8,16 @@ namespace Inv.Persistence.Contexts
     {
         private readonly IHttpContextAccessor httpcontext;
 
-        private readonly IDomainEventDispatcher _dispatcher;
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
-          IDomainEventDispatcher dispatcher, IHttpContextAccessor _httpcontext)
+        IHttpContextAccessor _httpcontext)
             : base(options)
         {
-            _dispatcher = dispatcher;
             httpcontext = _httpcontext;
         }
 
-        public DbSet<TheNumber> TheNumbers => Set<TheNumber>();
-        public DbSet<AuditTrail> AuditTrail { get; set; }
-        public DbSet<Brand> Brand => Set<Brand>();
-        public DbSet<Item> Item => Set<Item>();
-        public DbSet<ItemType> ItemType => Set<ItemType>();
-        public DbSet<MainCategory> MainCategory => Set<MainCategory>();
-        public DbSet<Model> Model => Set<Model>();
-        public DbSet<SubCategory> SubCategory => Set<SubCategory>();
-        public DbSet<UOM> UOM => Set<UOM>();
-        public DbSet<UOMConversion> UOMConversion => Set<UOMConversion>();
-        public DbSet<BrandItemType> BrandItemType => Set<BrandItemType>();
-        public DbSet<BinLocation> BinLocation => Set<BinLocation>();
-        public DbSet<Warehouse> Warehouse => Set<Warehouse>();
-        public DbSet<Store> Store => Set<Store>();
-        public DbSet<Zone> Zone => Set<Zone>();
-        public DbSet<Rack> Rack => Set<Rack>();
-        public DbSet<CompatibleItem> CompatibleItem => Set<CompatibleItem>();
-        public DbSet<CusPriceCategory> CusPriceCategory => Set<CusPriceCategory>();
-        public DbSet<Supplier> Supplier => Set<Supplier>();
-        //Help for EAM remove later
-        public DbSet<GRN> GRN => Set<GRN>();
-        public DbSet<GRNLineItem> GRNLineItem => Set<GRNLineItem>();
-        // In future work with this
-        public DbSet<GRNHeader> GRNHeader => Set<GRNHeader>();
-        public DbSet<GRNDetail> GRNDetail => Set<GRNDetail>();
-        public DbSet<Invoice> Invoice => Set<Invoice>();
-        public DbSet<InvoiceItem> InvoiceItem => Set<InvoiceItem>();
-        public DbSet<SystemPOHeader> SystemPOHeader => Set<SystemPOHeader>();
-        public DbSet<SystemPODetail> SystemPODetail => Set<SystemPODetail>();
-        // to be removed later
-        public DbSet<PurchaseOrder> PurchaseOrder => Set<PurchaseOrder>();
-        // to be removed later
-        public DbSet<PurchaseOrderItem> PurchaseOrderItem => Set<PurchaseOrderItem>();
-        public DbSet<DelRecord> DelRecord => Set<DelRecord>();
+        //public DbSet<TheNumber> TheNumbers => Set<TheNumber>();
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -94,35 +55,35 @@ namespace Inv.Persistence.Contexts
             modelBuilder.ApplyConfigurationsFromAssembly(System.Reflection.Assembly.GetExecutingAssembly());
         }
 
-        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            int userSerialID = 0;
-            var token = httpcontext?.HttpContext?.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
-            if (token != null)
-            {
-                var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
-                userSerialID = Convert.ToInt32(jwt.Claims.First(c => c.Type == "userSerialID").Value);
-            }
+        // public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        // {
+        //     int userSerialID = 0;
+        //     var token = httpcontext?.HttpContext?.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+        //     if (token != null)
+        //     {
+        //         var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
+        //         userSerialID = Convert.ToInt32(jwt.Claims.First(c => c.Type == "userSerialID").Value);
+        //     }
 
-            foreach (var entry in ChangeTracker.Entries<AuditTrail>().Where(e => e.State == EntityState.Added || e.State == EntityState.Modified))
-            {
-                entry.Entity.UserSerialID = userSerialID;
-            }
-            int result = await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+        //     foreach (var entry in ChangeTracker.Entries<AuditTrail>().Where(e => e.State == EntityState.Added || e.State == EntityState.Modified))
+        //     {
+        //         entry.Entity.UserSerialID = userSerialID;
+        //     }
+        //     int result = await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
-            // ignore events if no dispatcher provided
-            if (_dispatcher == null) return result;
+        //     // ignore events if no dispatcher provided
+        //     if (_dispatcher == null) return result;
 
-            // dispatch events only if save was successful
-            var entitiesWithEvents = ChangeTracker.Entries<BaseEntity>()
-                .Select(e => e.Entity)
-                .Where(e => e.DomainEvents.Any())
-                .ToArray();
+        //     // dispatch events only if save was successful
+        //     var entitiesWithEvents = ChangeTracker.Entries<BaseEntity>()
+        //         .Select(e => e.Entity)
+        //         .Where(e => e.DomainEvents.Any())
+        //         .ToArray();
 
-            await _dispatcher.DispatchAndClearEvents(entitiesWithEvents);
+        //     await _dispatcher.DispatchAndClearEvents(entitiesWithEvents);
 
-            return result;
-        }
+        //     return result;
+        // }
 
         public override int SaveChanges()
         {

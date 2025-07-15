@@ -1,5 +1,4 @@
 using Audit.Core;
-using Inv.Persistence.Audit;
 using Inv.Application.Extensions;
 using Inv.Persistence.Extensions;
 using Inv.WebAPI.Utility;
@@ -74,9 +73,9 @@ builder.Services.AddSwaggerGen(c =>
         TermsOfService = new Uri("https://example.com/terms"),
         Contact = new OpenApiContact
         {
-            Name = "Kokila Sanjeewa",
+            Name = "Denuwan Sathsara",
             Email = string.Empty,
-            Url = new Uri("https://www.facebook.com/kokila.sanjeewa"),
+            Url = new Uri("https://www.facebook.com/denuwan.sathsara"),
         },
 
         License = new OpenApiLicense
@@ -120,21 +119,6 @@ builder.Services.AddScoped<TokenService, TokenService>();
 
 //https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#install
 
-Audit.Core.Configuration.Setup()
-    .UseEntityFramework(_ => _
-        .AuditTypeMapper(t => typeof(AuditTrail))
-        .AuditEntityAction<AuditTrail>((ev, entry, entity) =>
-        {
-            entity.Action = entry.Action;
-            entity.AuditData = Helper.AuditData(entry);
-            entity.FrmSerialID = 0;
-            entity.LoginLogSerialID = 0;
-            entity.TableName = entry.EntityType.Name;
-            entity.AuditDateTimeUtc = DateTime.Now;
-            entity.MachineName = Environment.MachineName;
-            entity.UserSerialID = 0;
-        })
-         .IgnoreMatchedProperties(true));
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())

@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using AutoMapper.Configuration.Annotations;
-using Inv.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.Data.SqlClient;
 using System.Net.Http.Json;
